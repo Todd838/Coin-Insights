@@ -33,6 +33,7 @@ Coin Insights is a modern cryptocurrency price tracker built to provide fast, re
 # Tools
 - Node.js
 - Git & GitHub
+- Vite
 
 # How It Works
 - Coin data is fetched from the CoinGecko API and stored in application state.
