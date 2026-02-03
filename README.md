@@ -32,7 +32,6 @@ Coin Insights is a modern cryptocurrency price tracker built to provide fast, re
 
 # Tools
 - Node.js
-- Vite
 - Git & GitHub
 
 # How It Works
