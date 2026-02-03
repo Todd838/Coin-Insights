@@ -1,4 +1,4 @@
-Coin Insights
+# Coin Insights
 
 Coin Insights is a modern cryptocurrency price tracker built to provide fast, reliable market data and clear insights into price movement and volatility. The application is designed to help users monitor crypto markets in real time while remaining simple and accessible.
 
