@@ -17,13 +17,14 @@ Coin Insights is a modern cryptocurrency price tracker built to provide fast, re
 - Alert system for major price movements
 - Expanded coin coverage and analytics
 
-# Tech Used
-
 # Frontend 
 - React
 - JavaScript
 - HTML
 - CSS
+
+# Backend
+- Python
 
 # APIs
 - CoinGecko API (cryptocurrency market data)
