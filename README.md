@@ -1,16 +1,41 @@
-# React + Vite
+Coin Insights
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Coin Insights is a modern cryptocurrency price tracker built to provide fast, reliable market data and clear insights into price movement and volatility. The application is designed to help users monitor crypto markets in real time while remaining simple and accessible.
 
-Currently, two official plugins are available:
+# Features
+- Track prices for 100+ cryptocurrencies
+- Search and filter coins easily
+- View detailed coin information pages
+- Clean, responsive UI built with React
+- Efficient data fetching using the CoinGecko API
+- Modular component-based architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Planned Features
+- Real-time price updates using Binance WebSocket API
+- Volatility and momentum indicators
+- Improved performance for high-frequency price changes
+- Alert system for major price movements
+- Expanded coin coverage and analytics
 
-## React Compiler
+# Tech Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Frontend 
+- React
+- JavaScript
+- HTML
+- CSS
 
-## Expanding the ESLint configuration
+# APIs
+- CoinGecko API (cryptocurrency market data)
+- Binance WebSocket API (planned, for live updates)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Tools
+- Node.js
+- Vite
+- Git & GitHub
+
+# How It Works
+- Coin data is fetched from the CoinGecko API and stored in application state.
+- Users can search, filter, and select coins to view detailed information.
+- The app uses reusable components and React Context for state management.
+- Future updates will integrate WebSocket streaming for faster market updates.
