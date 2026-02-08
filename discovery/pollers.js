@@ -1,0 +1,357 @@
+/**
+ * discovery/pollers.js
+ * Node 18+ (you have Node 24) -> fetch is built-in
+ *
+ * Runs TWO pollers:
+ *  A) CoinGecko Onchain (GeckoTerminal) "recently updated tokens"
+ *  B) DexScreener "latest" feeds (token profiles + boosted tokens)
+ *
+ * Writes:
+ *  data/discovered_onchain.json
+ *  data/discovered_dexscreener.json
+ */
+
+import fs from "fs/promises";
+import path from "path";
+
+const DATA_DIR = path.join(process.cwd(), "data");
+const ONCHAIN_FILE = path.join(DATA_DIR, "discovered_onchain.json");
+const DEX_FILE = path.join(DATA_DIR, "discovered_dexscreener.json");
+
+// -------------------- CONFIG --------------------
+const CONFIG = {
+  // Option A: CoinGecko Onchain / GeckoTerminal
+  // Uses demo header if you have a key; if you don't, leave blank and try (may be rate-limited)
+  COINGECKO_DEMO_KEY: process.env.COINGECKO_DEMO_KEY || process.env.COINGECKO_API_KEY || "",
+
+  // Poll frequency
+  ONCHAIN_POLL_MS: 60_000,      // 60s is safe; tighten later if you have headroom
+  DEX_POLL_MS: 20_000,          // 20s is usually fine for free polling; don't go crazy
+
+  // Safety filtering (tune later)
+  MIN_LIQ_USD: 5_000,           // ignore tiny liquidity junk
+  MIN_VOL24H_USD: 2_000,        // ignore dead tokens/pairs
+};
+
+// -------------------- UTIL --------------------
+async function ensureDataDir() {
+  await fs.mkdir(DATA_DIR, { recursive: true });
+}
+
+async function readJson(filePath, fallback) {
+  try {
+    const raw = await fs.readFile(filePath, "utf8");
+    return JSON.parse(raw);
+  } catch {
+    return fallback;
+  }
+}
+
+async function writeJsonAtomic(filePath, obj) {
+  const tmp = `${filePath}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(obj, null, 2), "utf8");
+  await fs.rename(tmp, filePath);
+}
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+// Simple retry wrapper with backoff
+async function fetchJsonWithRetry(url, options = {}, tries = 3) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, options);
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} ${res.statusText} :: ${text.slice(0, 200)}`);
+      }
+      return await res.json();
+    } catch (e) {
+      lastErr = e;
+      // backoff: 0.5s, 1s, 2s ...
+      await sleep(500 * Math.pow(2, i));
+    }
+  }
+  throw lastErr;
+}
+
+// Normalize money strings/numbers safely
+function num(x) {
+  const n = Number(x);
+  return Number.isFinite(n) ? n : null;
+}
+
+// -------------------- STATE --------------------
+const state = {
+  onchain: {
+    // key: `${networkId}:${contractAddress}`
+    seen: new Set(),
+    items: [],
+  },
+  dex: {
+    // key: `${chainId}:${tokenAddress}` or `${chainId}:${pairAddress}` depending on endpoint
+    seen: new Set(),
+    items: [],
+  },
+};
+
+// Load prior state from disk (so you don't rediscover every restart)
+async function loadState() {
+  const onchain = await readJson(ONCHAIN_FILE, { items: [] });
+  for (const it of onchain.items || []) {
+    state.onchain.items.push(it);
+    if (it.key) state.onchain.seen.add(it.key);
+  }
+
+  const dex = await readJson(DEX_FILE, { items: [] });
+  for (const it of dex.items || []) {
+    state.dex.items.push(it);
+    if (it.key) state.dex.seen.add(it.key);
+  }
+}
+
+// -------------------- OPTION A: COINGECKO ONCHAIN --------------------
+// Endpoint: https://api.coingecko.com/api/v3/onchain/tokens/info_recently_updated
+// (Optionally: you can pass network via query params per docs; start with global.)
+async function pollCoinGeckoOnchain() {
+  const url = "https://api.coingecko.com/api/v3/onchain/tokens/info_recently_updated";
+
+  const headers = {};
+  if (CONFIG.COINGECKO_DEMO_KEY) {
+    headers["x-cg-demo-api-key"] = CONFIG.COINGECKO_DEMO_KEY;
+  }
+
+  console.log("[Onchain] Fetching from CoinGecko...");
+  const json = await fetchJsonWithRetry(url, { headers }, 3);
+
+  // The response shape can evolve; we defensively look for an array on common keys
+  const list =
+    (Array.isArray(json?.data) && json.data) ||
+    (Array.isArray(json) && json) ||
+    [];
+
+  let newCount = 0;
+
+  for (const row of list) {
+    // Defensive parse: CoinGecko onchain uses network + contract-like identifiers
+    const attrs = row?.attributes || row;
+
+    const networkId =
+      row?.relationships?.network?.data?.id ||
+      attrs?.network_id ||
+      attrs?.network ||
+      "unknown";
+
+    const contractAddress =
+      attrs?.address ||
+      attrs?.contract_address ||
+      row?.id ||
+      null;
+
+    if (!contractAddress) continue;
+
+    const key = `${networkId}:${contractAddress}`.toLowerCase();
+    if (state.onchain.seen.has(key)) continue;
+
+    // Pull metrics if present (not always)
+    const priceUsd = num(attrs?.price_usd ?? attrs?.price);
+    const liqUsd = num(attrs?.liquidity_usd ?? attrs?.liquidity);
+    const vol24hUsd = num(attrs?.volume_usd_24h ?? attrs?.volume_24h_usd ?? attrs?.volume);
+
+    // Optional filtering to cut noise
+    if (liqUsd !== null && liqUsd < CONFIG.MIN_LIQ_USD) continue;
+    if (vol24hUsd !== null && vol24hUsd < CONFIG.MIN_VOL24H_USD) continue;
+
+    const item = {
+      key,
+      source: "coingecko_onchain",
+      seenAt: new Date().toISOString(),
+      networkId,
+      contractAddress,
+      symbol: attrs?.symbol || null,
+      name: attrs?.name || null,
+      priceUsd,
+      liquidityUsd: liqUsd,
+      volume24hUsd: vol24hUsd,
+      raw: row, // keep raw for debugging; remove later if you want smaller files
+    };
+
+    state.onchain.seen.add(key);
+    state.onchain.items.unshift(item);
+    newCount++;
+  }
+
+  // Keep files manageable
+  state.onchain.items = state.onchain.items.slice(0, 2000);
+
+  if (newCount > 0) {
+    await writeJsonAtomic(ONCHAIN_FILE, { updatedAt: new Date().toISOString(), items: state.onchain.items });
+  }
+
+  console.log(`[Onchain] fetched=${list.length} new=${newCount} saved=${state.onchain.items.length}`);
+}
+
+// Wrapper with error handling that doesn't crash the process
+async function pollCoinGeckoOnchainSafe() {
+  try {
+    await pollCoinGeckoOnchain();
+  } catch (e) {
+    console.error("[Onchain] error:", e.message);
+    
+    // Check for 401 Unauthorized (API key required)
+    if (e.message.includes("401")) {
+      console.error("❌ [Onchain] CoinGecko requires API key!");
+      console.error("   Get free demo key at: https://www.coingecko.com/en/api/pricing");
+      console.error("   Then set: $env:COINGECKO_DEMO_KEY=\"your-key\"");
+      console.error("   Or set: $env:COINGECKO_API_KEY=\"your-key\"");
+      if (state.onchain.items.length === 0) {
+        await writeJsonAtomic(ONCHAIN_FILE, { 
+          updatedAt: new Date().toISOString(), 
+          items: [], 
+          error: "unauthorized",
+          message: "API key required - get one at coingecko.com/en/api"
+        });
+      }
+      return; // Don't keep trying if unauthorized
+    }
+    
+    // Check for rate limiting
+    if (e.message.includes("429")) {
+      console.log("[Onchain] Rate limited - will retry later");
+      if (state.onchain.items.length === 0) {
+        await writeJsonAtomic(ONCHAIN_FILE, { 
+          updatedAt: new Date().toISOString(), 
+          items: [], 
+          error: "rate_limited" 
+        });
+      }
+    }
+  }
+}
+
+// -------------------- OPTION B: DEXSCREENER (DEX PRICE FEED) --------------------
+// DexScreener "latest" feeds that are useful for discovery:
+// - token profiles latest: https://api.dexscreener.com/token-profiles/latest/v1
+// - boosted tokens latest: https://api.dexscreener.com/token-boosts/latest/v1
+// - boosted tokens top:    https://api.dexscreener.com/token-boosts/top/v1
+//
+// These endpoints are great for "what's hot/new" discovery.
+// Then you can enrich later via /token-pairs/v1/{chainId}/{tokenAddress} if you want.
+async function pollDexScreener() {
+  const urls = [
+    "https://api.dexscreener.com/token-profiles/latest/v1",
+    "https://api.dexscreener.com/token-boosts/latest/v1",
+    "https://api.dexscreener.com/token-boosts/top/v1",
+  ];
+
+  let totalFetched = 0;
+  let newCount = 0;
+
+  for (const url of urls) {
+    const json = await fetchJsonWithRetry(url, {}, 3);
+
+    const list = Array.isArray(json) ? json : (Array.isArray(json?.data) ? json.data : []);
+    totalFetched += list.length;
+
+    for (const row of list) {
+      // DexScreener rows commonly include chainId + tokenAddress (and sometimes pairAddress)
+      const chainId = (row?.chainId || row?.chain || "unknown").toLowerCase();
+      const tokenAddress = (row?.tokenAddress || row?.token_address || "").toLowerCase();
+      const pairAddress = (row?.pairAddress || row?.pair_address || "").toLowerCase();
+
+      // Choose a stable key: prefer tokenAddress; fall back to pairAddress
+      const addr = tokenAddress || pairAddress;
+      if (!addr) continue;
+
+      const key = `${chainId}:${addr}`;
+      if (state.dex.seen.has(key)) continue;
+
+      // Some endpoints are "promotion" style; may not include liquidity/volume
+      // We still store it as discovery. You can enrich later with token-pairs endpoint.
+      
+      // Try to extract name/symbol from the URL if available
+      let name = null;
+      let symbol = null;
+      
+      // For token-profiles, sometimes we can parse from URL or raw data
+      if (row?.url && tokenAddress) {
+        try {
+          // Fetch token details from DexScreener API to get name and symbol
+          const tokenUrl = `https://api.dexscreener.com/latest/dex/tokens/${tokenAddress}`;
+          const tokenData = await fetchJsonWithRetry(tokenUrl, {}, 1);
+          
+          if (tokenData?.pairs && tokenData.pairs.length > 0) {
+            const firstPair = tokenData.pairs[0];
+            name = firstPair?.baseToken?.name || null;
+            symbol = firstPair?.baseToken?.symbol || null;
+          }
+        } catch (e) {
+          // Silently fail - names are optional
+        }
+      }
+      
+      const item = {
+        key,
+        source: "dexscreener",
+        seenAt: new Date().toISOString(),
+        chainId,
+        tokenAddress: tokenAddress || null,
+        pairAddress: pairAddress || null,
+        symbol,
+        name,
+        url: row?.url || null,
+        description: row?.description || null,
+        links: row?.links || null,
+        icon: row?.icon || null,
+        header: row?.header || null,
+        raw: row,
+      };
+
+      state.dex.seen.add(key);
+      state.dex.items.unshift(item);
+      newCount++;
+    }
+  }
+
+  // Keep files manageable
+  state.dex.items = state.dex.items.slice(0, 3000);
+
+  if (newCount > 0) {
+    await writeJsonAtomic(DEX_FILE, { updatedAt: new Date().toISOString(), items: state.dex.items });
+  }
+
+  console.log(`[Dex] fetched=${totalFetched} new=${newCount} saved=${state.dex.items.length}`);
+}
+
+// Wrapper with error handling
+async function pollDexScreenerSafe() {
+  try {
+    await pollDexScreener();
+  } catch (e) {
+    console.error("[Dex] error:", e.message);
+  }
+}
+
+// -------------------- MAIN LOOP --------------------
+async function main() {
+  await ensureDataDir();
+  await loadState();
+
+  console.log("✅ Discovery pollers starting...");
+  console.log(`- Onchain poll every ${CONFIG.ONCHAIN_POLL_MS / 1000}s`);
+  console.log(`- DexScreener poll every ${CONFIG.DEX_POLL_MS / 1000}s`);
+
+  // Run once immediately
+  await Promise.allSettled([pollCoinGeckoOnchainSafe(), pollDexScreenerSafe()]);
+
+  // Schedule
+  setInterval(() => pollCoinGeckoOnchainSafe(), CONFIG.ONCHAIN_POLL_MS);
+  setInterval(() => pollDexScreenerSafe(), CONFIG.DEX_POLL_MS);
+}
+
+main().catch((e) => {
+  console.error("Fatal:", e);
+  process.exit(1);
+});

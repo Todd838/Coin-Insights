@@ -1,0 +1,3685 @@
+{
+  "updatedAt": "2026-02-08T09:34:06.517Z",
+  "items": [
+    {
+      "product_id": "G-USD",
+      "base_currency": "G",
+      "quote_currency": "USD",
+      "display_name": "G-USD",
+      "base_name": "Gravity",
+      "seenAt": "2026-02-08T09:34:06.516Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PAX-USD",
+      "base_currency": "PAX",
+      "quote_currency": "USD",
+      "display_name": "PAX-USD",
+      "base_name": "Paxos Standard",
+      "seenAt": "2026-02-08T09:34:06.516Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WAXL-USD",
+      "base_currency": "WAXL",
+      "quote_currency": "USD",
+      "display_name": "WAXL-USD",
+      "base_name": "Wrapped Axelar",
+      "seenAt": "2026-02-08T09:34:06.516Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "OSMO-USD",
+      "base_currency": "OSMO",
+      "quote_currency": "USD",
+      "display_name": "OSMO-USD",
+      "base_name": "Osmosis",
+      "seenAt": "2026-02-08T09:34:06.516Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KRL-USD",
+      "base_currency": "KRL",
+      "quote_currency": "USD",
+      "display_name": "KRL-USD",
+      "base_name": "Kryll",
+      "seenAt": "2026-02-08T09:34:06.516Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "POWR-USD",
+      "base_currency": "POWR",
+      "quote_currency": "USD",
+      "display_name": "POWR-USD",
+      "base_name": "Powerledger",
+      "seenAt": "2026-02-08T09:34:06.515Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DNT-USD",
+      "base_currency": "DNT",
+      "quote_currency": "USD",
+      "display_name": "DNT-USD",
+      "base_name": "district0x",
+      "seenAt": "2026-02-08T09:34:06.515Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HYPER-USD",
+      "base_currency": "HYPER",
+      "quote_currency": "USD",
+      "display_name": "HYPER-USD",
+      "base_name": "Hyperlane",
+      "seenAt": "2026-02-08T09:34:06.515Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "POND-USD",
+      "base_currency": "POND",
+      "quote_currency": "USD",
+      "display_name": "POND-USD",
+      "base_name": "Marlin",
+      "seenAt": "2026-02-08T09:34:06.515Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BTRST-USD",
+      "base_currency": "BTRST",
+      "quote_currency": "USD",
+      "display_name": "BTRST-USD",
+      "base_name": "Braintrust",
+      "seenAt": "2026-02-08T09:34:06.515Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZETACHAIN-USD",
+      "base_currency": "ZETACHAIN",
+      "quote_currency": "USD",
+      "display_name": "ZETACHAIN-USD",
+      "base_name": "Zetachain",
+      "seenAt": "2026-02-08T09:34:06.515Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RLC-USD",
+      "base_currency": "RLC",
+      "quote_currency": "USD",
+      "display_name": "RLC-USD",
+      "base_name": "iExec RLC",
+      "seenAt": "2026-02-08T09:34:06.514Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ME-USD",
+      "base_currency": "ME",
+      "quote_currency": "USD",
+      "display_name": "ME-USD",
+      "base_name": "Magic Eden",
+      "seenAt": "2026-02-08T09:34:06.514Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TOWNS-USD",
+      "base_currency": "TOWNS",
+      "quote_currency": "USD",
+      "display_name": "TOWNS-USD",
+      "base_name": "Towns Protocol",
+      "seenAt": "2026-02-08T09:34:06.514Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SEAM-USD",
+      "base_currency": "SEAM",
+      "quote_currency": "USD",
+      "display_name": "SEAM-USD",
+      "base_name": "Seamless",
+      "seenAt": "2026-02-08T09:34:06.514Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SUP-USD",
+      "base_currency": "SUP",
+      "quote_currency": "USD",
+      "display_name": "SUP-USD",
+      "base_name": "Superfluid",
+      "seenAt": "2026-02-08T09:34:06.514Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SHDW-USD",
+      "base_currency": "SHDW",
+      "quote_currency": "USD",
+      "display_name": "SHDW-USD",
+      "base_name": "Shadow Token",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SUKU-USD",
+      "base_currency": "SUKU",
+      "quote_currency": "USD",
+      "display_name": "SUKU-USD",
+      "base_name": "SUKU",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RAY-USD",
+      "base_currency": "RAY",
+      "quote_currency": "USD",
+      "display_name": "RAY-USD",
+      "base_name": "Raydium",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "YB-USD",
+      "base_currency": "YB",
+      "quote_currency": "USD",
+      "display_name": "YB-USD",
+      "base_name": "Yield Basis",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HIGH-USD",
+      "base_currency": "HIGH",
+      "quote_currency": "USD",
+      "display_name": "HIGH-USD",
+      "base_name": "Highstreet",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BADGER-USD",
+      "base_currency": "BADGER",
+      "quote_currency": "USD",
+      "display_name": "BADGER-USD",
+      "base_name": "Badger DAO",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CFG-USD",
+      "base_currency": "CFG",
+      "quote_currency": "USD",
+      "display_name": "CFG-USD",
+      "base_name": "Centrifuge",
+      "seenAt": "2026-02-08T09:34:06.513Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HOPR-USD",
+      "base_currency": "HOPR",
+      "quote_currency": "USD",
+      "display_name": "HOPR-USD",
+      "base_name": "HOPR",
+      "seenAt": "2026-02-08T09:34:06.512Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "INV-USD",
+      "base_currency": "INV",
+      "quote_currency": "USD",
+      "display_name": "INV-USD",
+      "base_name": "Inverse Finance",
+      "seenAt": "2026-02-08T09:34:06.512Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BNT-USD",
+      "base_currency": "BNT",
+      "quote_currency": "USD",
+      "display_name": "BNT-USD",
+      "base_name": "Bancor Network Token",
+      "seenAt": "2026-02-08T09:34:06.512Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MDT-USD",
+      "base_currency": "MDT",
+      "quote_currency": "USD",
+      "display_name": "MDT-USD",
+      "base_name": "Measurable Data Token",
+      "seenAt": "2026-02-08T09:34:06.512Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SYND-USD",
+      "base_currency": "SYND",
+      "quote_currency": "USD",
+      "display_name": "SYND-USD",
+      "base_name": "Syndicate",
+      "seenAt": "2026-02-08T09:34:06.512Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LAYER-USD",
+      "base_currency": "LAYER",
+      "quote_currency": "USD",
+      "display_name": "LAYER-USD",
+      "base_name": "Solayer",
+      "seenAt": "2026-02-08T09:34:06.512Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DBR-USD",
+      "base_currency": "DBR",
+      "quote_currency": "USD",
+      "display_name": "DBR-USD",
+      "base_name": "deBridge",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IDEX-USD",
+      "base_currency": "IDEX",
+      "quote_currency": "USD",
+      "display_name": "IDEX-USD",
+      "base_name": "IDEX",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KNC-USD",
+      "base_currency": "KNC",
+      "quote_currency": "USD",
+      "display_name": "KNC-USD",
+      "base_name": "Kyber Network",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALT-USD",
+      "base_currency": "ALT",
+      "quote_currency": "USD",
+      "display_name": "ALT-USD",
+      "base_name": "Altlayer",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BARD-USD",
+      "base_currency": "BARD",
+      "quote_currency": "USD",
+      "display_name": "BARD-USD",
+      "base_name": "Lombard",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PLU-USD",
+      "base_currency": "PLU",
+      "quote_currency": "USD",
+      "display_name": "PLU-USD",
+      "base_name": "Pluton",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TIME-USD",
+      "base_currency": "TIME",
+      "quote_currency": "USD",
+      "display_name": "TIME-USD",
+      "base_name": "Chrono.tech",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FARM-USD",
+      "base_currency": "FARM",
+      "quote_currency": "USD",
+      "display_name": "FARM-USD",
+      "base_name": "Harvest Finance",
+      "seenAt": "2026-02-08T09:34:06.511Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PIRATE-USD",
+      "base_currency": "PIRATE",
+      "quote_currency": "USD",
+      "display_name": "PIRATE-USD",
+      "base_name": "Pirate Nation Token",
+      "seenAt": "2026-02-08T09:34:06.510Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BLAST-USD",
+      "base_currency": "BLAST",
+      "quote_currency": "USD",
+      "display_name": "BLAST-USD",
+      "base_name": "Blast",
+      "seenAt": "2026-02-08T09:34:06.510Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FOX-USD",
+      "base_currency": "FOX",
+      "quote_currency": "USD",
+      "display_name": "FOX-USD",
+      "base_name": "Shapeshift FOX Token",
+      "seenAt": "2026-02-08T09:34:06.510Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LRDS-USD",
+      "base_currency": "LRDS",
+      "quote_currency": "USD",
+      "display_name": "LRDS-USD",
+      "base_name": "Blocklords",
+      "seenAt": "2026-02-08T09:34:06.510Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AST-USD",
+      "base_currency": "AST",
+      "quote_currency": "USD",
+      "display_name": "AST-USD",
+      "base_name": "AirSwap",
+      "seenAt": "2026-02-08T09:34:06.510Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CTX-USD",
+      "base_currency": "CTX",
+      "quote_currency": "USD",
+      "display_name": "CTX-USD",
+      "base_name": "Cryptex Finance",
+      "seenAt": "2026-02-08T09:34:06.509Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HONEY-USD",
+      "base_currency": "HONEY",
+      "quote_currency": "USD",
+      "display_name": "HONEY-USD",
+      "base_name": "Hivemapper",
+      "seenAt": "2026-02-08T09:34:06.509Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RSC-USD",
+      "base_currency": "RSC",
+      "quote_currency": "USD",
+      "display_name": "RSC-USD",
+      "base_name": "ResearchCoin",
+      "seenAt": "2026-02-08T09:34:06.509Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "USDS-USD",
+      "base_currency": "USDS",
+      "quote_currency": "USD",
+      "display_name": "USDS-USD",
+      "base_name": "USDS",
+      "seenAt": "2026-02-08T09:34:06.509Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PYR-USD",
+      "base_currency": "PYR",
+      "quote_currency": "USD",
+      "display_name": "PYR-USD",
+      "base_name": "Vulcan Forged PYR",
+      "seenAt": "2026-02-08T09:34:06.509Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AUDIO-USD",
+      "base_currency": "AUDIO",
+      "quote_currency": "USD",
+      "display_name": "AUDIO-USD",
+      "base_name": "Audius",
+      "seenAt": "2026-02-08T09:34:06.508Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "T-USD",
+      "base_currency": "T",
+      "quote_currency": "USD",
+      "display_name": "T-USD",
+      "base_name": "Threshold",
+      "seenAt": "2026-02-08T09:34:06.508Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "2Z-USD",
+      "base_currency": "2Z",
+      "quote_currency": "USD",
+      "display_name": "2Z-USD",
+      "base_name": "DoubleZero",
+      "seenAt": "2026-02-08T09:34:06.508Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PNUT-USD",
+      "base_currency": "PNUT",
+      "quote_currency": "USD",
+      "display_name": "PNUT-USD",
+      "base_name": "Peanut the Squirrel",
+      "seenAt": "2026-02-08T09:34:06.508Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ELA-USD",
+      "base_currency": "ELA",
+      "quote_currency": "USD",
+      "display_name": "ELA-USD",
+      "base_name": "Elastos",
+      "seenAt": "2026-02-08T09:34:06.508Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "OMNI-USD",
+      "base_currency": "OMNI",
+      "quote_currency": "USD",
+      "display_name": "OMNI-USD",
+      "base_name": "Omni Network",
+      "seenAt": "2026-02-08T09:34:06.508Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KAVA-USD",
+      "base_currency": "KAVA",
+      "quote_currency": "USD",
+      "display_name": "KAVA-USD",
+      "base_name": "Kava",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CELR-USD",
+      "base_currency": "CELR",
+      "quote_currency": "USD",
+      "display_name": "CELR-USD",
+      "base_name": "Celer Network",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GMT-USD",
+      "base_currency": "GMT",
+      "quote_currency": "USD",
+      "display_name": "GMT-USD",
+      "base_name": "STEPN",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BOBA-USD",
+      "base_currency": "BOBA",
+      "quote_currency": "USD",
+      "display_name": "BOBA-USD",
+      "base_name": "Boba Network",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CORECHAIN-USD",
+      "base_currency": "CORECHAIN",
+      "quote_currency": "USD",
+      "display_name": "CORECHAIN-USD",
+      "base_name": "Core",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KMNO-USD",
+      "base_currency": "KMNO",
+      "quote_currency": "USD",
+      "display_name": "KMNO-USD",
+      "base_name": "Kamino",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "OXT-USD",
+      "base_currency": "OXT",
+      "quote_currency": "USD",
+      "display_name": "OXT-USD",
+      "base_name": "Orchid",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BLZ-USD",
+      "base_currency": "BLZ",
+      "quote_currency": "USD",
+      "display_name": "BLZ-USD",
+      "base_name": "Bluzelle",
+      "seenAt": "2026-02-08T09:34:06.507Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "OCEAN-USD",
+      "base_currency": "OCEAN",
+      "quote_currency": "USD",
+      "display_name": "OCEAN-USD",
+      "base_name": "Ocean Protocol",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALLO-USD",
+      "base_currency": "ALLO",
+      "quote_currency": "USD",
+      "display_name": "ALLO-USD",
+      "base_name": "Allora",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MATH-USD",
+      "base_currency": "MATH",
+      "quote_currency": "USD",
+      "display_name": "MATH-USD",
+      "base_name": "MATH",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ARPA-USD",
+      "base_currency": "ARPA",
+      "quote_currency": "USD",
+      "display_name": "ARPA-USD",
+      "base_name": "ARPA Chain",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "QI-USD",
+      "base_currency": "QI",
+      "quote_currency": "USD",
+      "display_name": "QI-USD",
+      "base_name": "BENQI",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GODS-USD",
+      "base_currency": "GODS",
+      "quote_currency": "USD",
+      "display_name": "GODS-USD",
+      "base_name": "Gods Unchained",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CTSI-USD",
+      "base_currency": "CTSI",
+      "quote_currency": "USD",
+      "display_name": "CTSI-USD",
+      "base_name": "Cartesi",
+      "seenAt": "2026-02-08T09:34:06.506Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BLUR-USD",
+      "base_currency": "BLUR",
+      "quote_currency": "USD",
+      "display_name": "BLUR-USD",
+      "base_name": "Blur",
+      "seenAt": "2026-02-08T09:34:06.505Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MPLX-USD",
+      "base_currency": "MPLX",
+      "quote_currency": "USD",
+      "display_name": "MPLX-USD",
+      "base_name": "Metaplex",
+      "seenAt": "2026-02-08T09:34:06.505Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SPELL-USD",
+      "base_currency": "SPELL",
+      "quote_currency": "USD",
+      "display_name": "SPELL-USD",
+      "base_name": "Spell Token",
+      "seenAt": "2026-02-08T09:34:06.505Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FAI-USD",
+      "base_currency": "FAI",
+      "quote_currency": "USD",
+      "display_name": "FAI-USD",
+      "base_name": "Freysa",
+      "seenAt": "2026-02-08T09:34:06.505Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZETA-USD",
+      "base_currency": "ZETA",
+      "quote_currency": "USD",
+      "display_name": "ZETA-USD",
+      "base_name": "Zetachain",
+      "seenAt": "2026-02-08T09:34:06.505Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ACX-USD",
+      "base_currency": "ACX",
+      "quote_currency": "USD",
+      "display_name": "ACX-USD",
+      "base_name": "Across Protocol",
+      "seenAt": "2026-02-08T09:34:06.505Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BICO-USD",
+      "base_currency": "BICO",
+      "quote_currency": "USD",
+      "display_name": "BICO-USD",
+      "base_name": "BICONOMY (BICO)",
+      "seenAt": "2026-02-08T09:34:06.504Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BAND-USD",
+      "base_currency": "BAND",
+      "quote_currency": "USD",
+      "display_name": "BAND-USD",
+      "base_name": "Band Protocol",
+      "seenAt": "2026-02-08T09:34:06.504Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CGLD-USD",
+      "base_currency": "CGLD",
+      "quote_currency": "USD",
+      "display_name": "CGLD-USD",
+      "base_name": "Celo",
+      "seenAt": "2026-02-08T09:34:06.504Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RARE-USD",
+      "base_currency": "RARE",
+      "quote_currency": "USD",
+      "display_name": "RARE-USD",
+      "base_name": "SuperRare",
+      "seenAt": "2026-02-08T09:34:06.504Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "00-USD",
+      "base_currency": "00",
+      "quote_currency": "USD",
+      "display_name": "00-USD",
+      "base_name": "00 Token",
+      "seenAt": "2026-02-08T09:34:06.504Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "UMA-USD",
+      "base_currency": "UMA",
+      "quote_currency": "USD",
+      "display_name": "UMA-USD",
+      "base_name": "UMA",
+      "seenAt": "2026-02-08T09:34:06.504Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MSOL-USD",
+      "base_currency": "MSOL",
+      "quote_currency": "USD",
+      "display_name": "MSOL-USD",
+      "base_name": "Marinade Staked SOL",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ERA-USD",
+      "base_currency": "ERA",
+      "quote_currency": "USD",
+      "display_name": "ERA-USD",
+      "base_name": "Caldera",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "APR-USD",
+      "base_currency": "APR",
+      "quote_currency": "USD",
+      "display_name": "APR-USD",
+      "base_name": "aPriori",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "REQ-USD",
+      "base_currency": "REQ",
+      "quote_currency": "USD",
+      "display_name": "REQ-USD",
+      "base_name": "Request",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GTC-USD",
+      "base_currency": "GTC",
+      "quote_currency": "USD",
+      "display_name": "GTC-USD",
+      "base_name": "Gitcoin",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "COTI-USD",
+      "base_currency": "COTI",
+      "quote_currency": "USD",
+      "display_name": "COTI-USD",
+      "base_name": "COTI",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GNO-USD",
+      "base_currency": "GNO",
+      "quote_currency": "USD",
+      "display_name": "GNO-USD",
+      "base_name": "Gnosis",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SPA-USD",
+      "base_currency": "SPA",
+      "quote_currency": "USD",
+      "display_name": "SPA-USD",
+      "base_name": "Sperax",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AGLD-USD",
+      "base_currency": "AGLD",
+      "quote_currency": "USD",
+      "display_name": "AGLD-USD",
+      "base_name": "Adventure Gold",
+      "seenAt": "2026-02-08T09:34:06.503Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NEWT-USD",
+      "base_currency": "NEWT",
+      "quote_currency": "USD",
+      "display_name": "NEWT-USD",
+      "base_name": "Newton",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DOOD-USD",
+      "base_currency": "DOOD",
+      "quote_currency": "USD",
+      "display_name": "DOOD-USD",
+      "base_name": "Doodles",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HOME-USD",
+      "base_currency": "HOME",
+      "quote_currency": "USD",
+      "display_name": "HOME-USD",
+      "base_name": "Defi App",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALCX-USD",
+      "base_currency": "ALCX",
+      "quote_currency": "USD",
+      "display_name": "ALCX-USD",
+      "base_name": "Alchemix",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RPL-USD",
+      "base_currency": "RPL",
+      "quote_currency": "USD",
+      "display_name": "RPL-USD",
+      "base_name": "Rocket Pool",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "VARA-USD",
+      "base_currency": "VARA",
+      "quote_currency": "USD",
+      "display_name": "VARA-USD",
+      "base_name": "Vara",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PRO-USD",
+      "base_currency": "PRO",
+      "quote_currency": "USD",
+      "display_name": "PRO-USD",
+      "base_name": "Propy",
+      "seenAt": "2026-02-08T09:34:06.502Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NKN-USD",
+      "base_currency": "NKN",
+      "quote_currency": "USD",
+      "display_name": "NKN-USD",
+      "base_name": "NKN",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LSETH-USD",
+      "base_currency": "LSETH",
+      "quote_currency": "USD",
+      "display_name": "LSETH-USD",
+      "base_name": "Liquid Staked ETH",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DEXT-USD",
+      "base_currency": "DEXT",
+      "quote_currency": "USD",
+      "display_name": "DEXT-USD",
+      "base_name": "DEXTools",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PUNDIX-USD",
+      "base_currency": "PUNDIX",
+      "quote_currency": "USD",
+      "display_name": "PUNDIX-USD",
+      "base_name": "Pundi X (New)",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "POLS-USD",
+      "base_currency": "POLS",
+      "quote_currency": "USD",
+      "display_name": "POLS-USD",
+      "base_name": "Polkastarter",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "COOKIE-USD",
+      "base_currency": "COOKIE",
+      "quote_currency": "USD",
+      "display_name": "COOKIE-USD",
+      "base_name": "Cookie DAO",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "METIS-USD",
+      "base_currency": "METIS",
+      "quote_currency": "USD",
+      "display_name": "METIS-USD",
+      "base_name": "Metis",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GHST-USD",
+      "base_currency": "GHST",
+      "quote_currency": "USD",
+      "display_name": "GHST-USD",
+      "base_name": "Aavegotchi",
+      "seenAt": "2026-02-08T09:34:06.501Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "JUPITER-USD",
+      "base_currency": "JUPITER",
+      "quote_currency": "USD",
+      "display_name": "JUPITER-USD",
+      "base_name": "Jupiter",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GST-USD",
+      "base_currency": "GST",
+      "quote_currency": "USD",
+      "display_name": "GST-USD",
+      "base_name": "Green Satoshi Token",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BOBBOB-USD",
+      "base_currency": "BOBBOB",
+      "quote_currency": "USD",
+      "display_name": "BOBBOB-USD",
+      "base_name": "BOB (Build on Bitcoin)",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FIS-USD",
+      "base_currency": "FIS",
+      "quote_currency": "USD",
+      "display_name": "FIS-USD",
+      "base_name": "StaFi",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ARKM-USD",
+      "base_currency": "ARKM",
+      "quote_currency": "USD",
+      "display_name": "ARKM-USD",
+      "base_name": "Arkham",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KARRAT-USD",
+      "base_currency": "KARRAT",
+      "quote_currency": "USD",
+      "display_name": "KARRAT-USD",
+      "base_name": "Karrat",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "VOXEL-USD",
+      "base_currency": "VOXEL",
+      "quote_currency": "USD",
+      "display_name": "VOXEL-USD",
+      "base_name": "Voxies",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALEO-USD",
+      "base_currency": "ALEO",
+      "quote_currency": "USD",
+      "display_name": "ALEO-USD",
+      "base_name": "Aleo",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FORTH-USD",
+      "base_currency": "FORTH",
+      "quote_currency": "USD",
+      "display_name": "FORTH-USD",
+      "base_name": "Ampleforth Governance Token",
+      "seenAt": "2026-02-08T09:34:06.500Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DEGEN-USD",
+      "base_currency": "DEGEN",
+      "quote_currency": "USD",
+      "display_name": "DEGEN-USD",
+      "base_name": "Degen",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MAMO-USD",
+      "base_currency": "MAMO",
+      "quote_currency": "USD",
+      "display_name": "MAMO-USD",
+      "base_name": "Mamo",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KSM-USD",
+      "base_currency": "KSM",
+      "quote_currency": "USD",
+      "display_name": "KSM-USD",
+      "base_name": "Kusama",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "1INCH-USD",
+      "base_currency": "1INCH",
+      "quote_currency": "USD",
+      "display_name": "1INCH-USD",
+      "base_name": "1inch",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "VELO-USD",
+      "base_currency": "VELO",
+      "quote_currency": "USD",
+      "display_name": "VELO-USD",
+      "base_name": "Velodrome Finance",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALEPH-USD",
+      "base_currency": "ALEPH",
+      "quote_currency": "USD",
+      "display_name": "ALEPH-USD",
+      "base_name": "Aleph Cloud",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RONIN-USD",
+      "base_currency": "RONIN",
+      "quote_currency": "USD",
+      "display_name": "RONIN-USD",
+      "base_name": "Ronin",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SHPING-USD",
+      "base_currency": "SHPING",
+      "quote_currency": "USD",
+      "display_name": "SHPING-USD",
+      "base_name": "SHPING",
+      "seenAt": "2026-02-08T09:34:06.499Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TRU-USD",
+      "base_currency": "TRU",
+      "quote_currency": "USD",
+      "display_name": "TRU-USD",
+      "base_name": "TrueFi",
+      "seenAt": "2026-02-08T09:34:06.498Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XYO-USD",
+      "base_currency": "XYO",
+      "quote_currency": "USD",
+      "display_name": "XYO-USD",
+      "base_name": "XYO",
+      "seenAt": "2026-02-08T09:34:06.498Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IO-USD",
+      "base_currency": "IO",
+      "quote_currency": "USD",
+      "display_name": "IO-USD",
+      "base_name": "io.net",
+      "seenAt": "2026-02-08T09:34:06.498Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ABT-USD",
+      "base_currency": "ABT",
+      "quote_currency": "USD",
+      "display_name": "ABT-USD",
+      "base_name": "Arcblock",
+      "seenAt": "2026-02-08T09:34:06.498Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AVT-USD",
+      "base_currency": "AVT",
+      "quote_currency": "USD",
+      "display_name": "AVT-USD",
+      "base_name": "Aventus",
+      "seenAt": "2026-02-08T09:34:06.498Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MASK-USD",
+      "base_currency": "MASK",
+      "quote_currency": "USD",
+      "display_name": "MASK-USD",
+      "base_name": "Mask Network",
+      "seenAt": "2026-02-08T09:34:06.498Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SD-USD",
+      "base_currency": "SD",
+      "quote_currency": "USD",
+      "display_name": "SD-USD",
+      "base_name": "Stader",
+      "seenAt": "2026-02-08T09:34:06.497Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RSR-USD",
+      "base_currency": "RSR",
+      "quote_currency": "USD",
+      "display_name": "RSR-USD",
+      "base_name": "Reserve Rights",
+      "seenAt": "2026-02-08T09:34:06.497Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FLUID-USD",
+      "base_currency": "FLUID",
+      "quote_currency": "USD",
+      "display_name": "FLUID-USD",
+      "base_name": "Fluid",
+      "seenAt": "2026-02-08T09:34:06.497Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LRC-USD",
+      "base_currency": "LRC",
+      "quote_currency": "USD",
+      "display_name": "LRC-USD",
+      "base_name": "Loopring",
+      "seenAt": "2026-02-08T09:34:06.497Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ACS-USD",
+      "base_currency": "ACS",
+      "quote_currency": "USD",
+      "display_name": "ACS-USD",
+      "base_name": "Access",
+      "seenAt": "2026-02-08T09:34:06.497Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LQTY-USD",
+      "base_currency": "LQTY",
+      "quote_currency": "USD",
+      "display_name": "LQTY-USD",
+      "base_name": "Liquity",
+      "seenAt": "2026-02-08T09:34:06.497Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MLN-USD",
+      "base_currency": "MLN",
+      "quote_currency": "USD",
+      "display_name": "MLN-USD",
+      "base_name": "Enzyme",
+      "seenAt": "2026-02-08T09:34:06.496Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FIDA-USD",
+      "base_currency": "FIDA",
+      "quote_currency": "USD",
+      "display_name": "FIDA-USD",
+      "base_name": "Bonfida",
+      "seenAt": "2026-02-08T09:34:06.496Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TROLL-USD",
+      "base_currency": "TROLL",
+      "quote_currency": "USD",
+      "display_name": "TROLL-USD",
+      "base_name": "TROLL",
+      "seenAt": "2026-02-08T09:34:06.496Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RLS-USD",
+      "base_currency": "RLS",
+      "quote_currency": "USD",
+      "display_name": "RLS-USD",
+      "base_name": "Rayls",
+      "seenAt": "2026-02-08T09:34:06.496Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "COSMOSDYDX-USD",
+      "base_currency": "COSMOSDYDX",
+      "quote_currency": "USD",
+      "display_name": "COSMOSDYDX-USD",
+      "base_name": "DYDX",
+      "seenAt": "2026-02-08T09:34:06.496Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "APE-USD",
+      "base_currency": "APE",
+      "quote_currency": "USD",
+      "display_name": "APE-USD",
+      "base_name": "ApeCoin",
+      "seenAt": "2026-02-08T09:34:06.496Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RAD-USD",
+      "base_currency": "RAD",
+      "quote_currency": "USD",
+      "display_name": "RAD-USD",
+      "base_name": "Radworks",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BAL-USD",
+      "base_currency": "BAL",
+      "quote_currency": "USD",
+      "display_name": "BAL-USD",
+      "base_name": "Balancer",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LINEA-USD",
+      "base_currency": "LINEA",
+      "quote_currency": "USD",
+      "display_name": "LINEA-USD",
+      "base_name": "Linea",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SUSHI-USD",
+      "base_currency": "SUSHI",
+      "quote_currency": "USD",
+      "display_name": "SUSHI-USD",
+      "base_name": "SushiSwap",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CAKE-USD",
+      "base_currency": "CAKE",
+      "quote_currency": "USD",
+      "display_name": "CAKE-USD",
+      "base_name": "PancakeSwap",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ILV-USD",
+      "base_currency": "ILV",
+      "quote_currency": "USD",
+      "display_name": "ILV-USD",
+      "base_name": "Illuvium",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "B3-USD",
+      "base_currency": "B3",
+      "quote_currency": "USD",
+      "display_name": "B3-USD",
+      "base_name": "B3 (Base)",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "VTHO-USD",
+      "base_currency": "VTHO",
+      "quote_currency": "USD",
+      "display_name": "VTHO-USD",
+      "base_name": "VeThor Token",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GFI-USD",
+      "base_currency": "GFI",
+      "quote_currency": "USD",
+      "display_name": "GFI-USD",
+      "base_name": "Goldfinch Protocol",
+      "seenAt": "2026-02-08T09:34:06.495Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ASM-USD",
+      "base_currency": "ASM",
+      "quote_currency": "USD",
+      "display_name": "ASM-USD",
+      "base_name": "Assemble AI",
+      "seenAt": "2026-02-08T09:34:06.494Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SQD-USD",
+      "base_currency": "SQD",
+      "quote_currency": "USD",
+      "display_name": "SQD-USD",
+      "base_name": "Subsquid",
+      "seenAt": "2026-02-08T09:34:06.494Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "STG-USD",
+      "base_currency": "STG",
+      "quote_currency": "USD",
+      "display_name": "STG-USD",
+      "base_name": "Stargate Finance",
+      "seenAt": "2026-02-08T09:34:06.494Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AURORA-USD",
+      "base_currency": "AURORA",
+      "quote_currency": "USD",
+      "display_name": "AURORA-USD",
+      "base_name": "Aurora",
+      "seenAt": "2026-02-08T09:34:06.494Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GLM-USD",
+      "base_currency": "GLM",
+      "quote_currency": "USD",
+      "display_name": "GLM-USD",
+      "base_name": "Golem",
+      "seenAt": "2026-02-08T09:34:06.494Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LCX-USD",
+      "base_currency": "LCX",
+      "quote_currency": "USD",
+      "display_name": "LCX-USD",
+      "base_name": "LCX",
+      "seenAt": "2026-02-08T09:34:06.494Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AXL-USD",
+      "base_currency": "AXL",
+      "quote_currency": "USD",
+      "display_name": "AXL-USD",
+      "base_name": "Axelar",
+      "seenAt": "2026-02-08T09:34:06.493Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FLOKI-USD",
+      "base_currency": "FLOKI",
+      "quote_currency": "USD",
+      "display_name": "FLOKI-USD",
+      "base_name": "FLOKI",
+      "seenAt": "2026-02-08T09:34:06.493Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALICE-USD",
+      "base_currency": "ALICE",
+      "quote_currency": "USD",
+      "display_name": "ALICE-USD",
+      "base_name": "MyNeighborAlice",
+      "seenAt": "2026-02-08T09:34:06.493Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MINA-USD",
+      "base_currency": "MINA",
+      "quote_currency": "USD",
+      "display_name": "MINA-USD",
+      "base_name": "Mina",
+      "seenAt": "2026-02-08T09:34:06.493Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HNT-USD",
+      "base_currency": "HNT",
+      "quote_currency": "USD",
+      "display_name": "HNT-USD",
+      "base_name": "Helium",
+      "seenAt": "2026-02-08T09:34:06.493Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SKL-USD",
+      "base_currency": "SKL",
+      "quote_currency": "USD",
+      "display_name": "SKL-USD",
+      "base_name": "SKALE",
+      "seenAt": "2026-02-08T09:34:06.493Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZKP-USD",
+      "base_currency": "ZKP",
+      "quote_currency": "USD",
+      "display_name": "ZKP-USD",
+      "base_name": "zkPass",
+      "seenAt": "2026-02-08T09:34:06.492Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SAFE-USD",
+      "base_currency": "SAFE",
+      "quote_currency": "USD",
+      "display_name": "SAFE-USD",
+      "base_name": "Safe",
+      "seenAt": "2026-02-08T09:34:06.492Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "L3-USD",
+      "base_currency": "L3",
+      "quote_currency": "USD",
+      "display_name": "L3-USD",
+      "base_name": "Layer3",
+      "seenAt": "2026-02-08T09:34:06.492Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BAT-USD",
+      "base_currency": "BAT",
+      "quote_currency": "USD",
+      "display_name": "BAT-USD",
+      "base_name": "Basic Attention Token",
+      "seenAt": "2026-02-08T09:34:06.492Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ACH-USD",
+      "base_currency": "ACH",
+      "quote_currency": "USD",
+      "display_name": "ACH-USD",
+      "base_name": "Alchemy Pay",
+      "seenAt": "2026-02-08T09:34:06.492Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SAPIEN-USD",
+      "base_currency": "SAPIEN",
+      "quote_currency": "USD",
+      "display_name": "SAPIEN-USD",
+      "base_name": "Sapien",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KERNEL-USD",
+      "base_currency": "KERNEL",
+      "quote_currency": "USD",
+      "display_name": "KERNEL-USD",
+      "base_name": "KernelDAO",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HFT-USD",
+      "base_currency": "HFT",
+      "quote_currency": "USD",
+      "display_name": "HFT-USD",
+      "base_name": "Hashflow",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TRAC-USD",
+      "base_currency": "TRAC",
+      "quote_currency": "USD",
+      "display_name": "TRAC-USD",
+      "base_name": "OriginTrail",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FORT-USD",
+      "base_currency": "FORT",
+      "quote_currency": "USD",
+      "display_name": "FORT-USD",
+      "base_name": "Forta",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BIGTIME-USD",
+      "base_currency": "BIGTIME",
+      "quote_currency": "USD",
+      "display_name": "BIGTIME-USD",
+      "base_name": "Big Time",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KAITO-USD",
+      "base_currency": "KAITO",
+      "quote_currency": "USD",
+      "display_name": "KAITO-USD",
+      "base_name": "Kaito",
+      "seenAt": "2026-02-08T09:34:06.491Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MOG-USD",
+      "base_currency": "MOG",
+      "quote_currency": "USD",
+      "display_name": "MOG-USD",
+      "base_name": "Mog Coin",
+      "seenAt": "2026-02-08T09:34:06.490Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IOTX-USD",
+      "base_currency": "IOTX",
+      "quote_currency": "USD",
+      "display_name": "IOTX-USD",
+      "base_name": "IoTeX",
+      "seenAt": "2026-02-08T09:34:06.490Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WMTX-USD",
+      "base_currency": "WMTX",
+      "quote_currency": "USD",
+      "display_name": "WMTX-USD",
+      "base_name": "World Mobile Token",
+      "seenAt": "2026-02-08T09:34:06.490Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "THQ-USD",
+      "base_currency": "THQ",
+      "quote_currency": "USD",
+      "display_name": "THQ-USD",
+      "base_name": "Theoriq",
+      "seenAt": "2026-02-08T09:34:06.490Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TNSR-USD",
+      "base_currency": "TNSR",
+      "quote_currency": "USD",
+      "display_name": "TNSR-USD",
+      "base_name": "Tensor",
+      "seenAt": "2026-02-08T09:34:06.490Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XAN-USD",
+      "base_currency": "XAN",
+      "quote_currency": "USD",
+      "display_name": "XAN-USD",
+      "base_name": "Anoma",
+      "seenAt": "2026-02-08T09:34:06.490Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DOLO-USD",
+      "base_currency": "DOLO",
+      "quote_currency": "USD",
+      "display_name": "DOLO-USD",
+      "base_name": "Dolomite",
+      "seenAt": "2026-02-08T09:34:06.489Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AWE-USD",
+      "base_currency": "AWE",
+      "quote_currency": "USD",
+      "display_name": "AWE-USD",
+      "base_name": "Awe",
+      "seenAt": "2026-02-08T09:34:06.489Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AERGO-USD",
+      "base_currency": "AERGO",
+      "quote_currency": "USD",
+      "display_name": "AERGO-USD",
+      "base_name": "Aergo",
+      "seenAt": "2026-02-08T09:34:06.489Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ANKR-USD",
+      "base_currency": "ANKR",
+      "quote_currency": "USD",
+      "display_name": "ANKR-USD",
+      "base_name": "Ankr",
+      "seenAt": "2026-02-08T09:34:06.489Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "INX-USD",
+      "base_currency": "INX",
+      "quote_currency": "USD",
+      "display_name": "INX-USD",
+      "base_name": "Infinex",
+      "seenAt": "2026-02-08T09:34:06.489Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FLOW-USD",
+      "base_currency": "FLOW",
+      "quote_currency": "USD",
+      "display_name": "FLOW-USD",
+      "base_name": "Flow",
+      "seenAt": "2026-02-08T09:34:06.489Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FLOCK-USD",
+      "base_currency": "FLOCK",
+      "quote_currency": "USD",
+      "display_name": "FLOCK-USD",
+      "base_name": "Flock",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AKT-USD",
+      "base_currency": "AKT",
+      "quote_currency": "USD",
+      "display_name": "AKT-USD",
+      "base_name": "Akash Network",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DIA-USD",
+      "base_currency": "DIA",
+      "quote_currency": "USD",
+      "display_name": "DIA-USD",
+      "base_name": "DIA",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NOM-USD",
+      "base_currency": "NOM",
+      "quote_currency": "USD",
+      "display_name": "NOM-USD",
+      "base_name": "Nomina",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GIGA-USD",
+      "base_currency": "GIGA",
+      "quote_currency": "USD",
+      "display_name": "GIGA-USD",
+      "base_name": "Gigachad",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "OGN-USD",
+      "base_currency": "OGN",
+      "quote_currency": "USD",
+      "display_name": "OGN-USD",
+      "base_name": "Origin Token",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "INDEX-USD",
+      "base_currency": "INDEX",
+      "quote_currency": "USD",
+      "display_name": "INDEX-USD",
+      "base_name": "Index Cooperative",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "YFI-USD",
+      "base_currency": "YFI",
+      "quote_currency": "USD",
+      "display_name": "YFI-USD",
+      "base_name": "yearn.finance",
+      "seenAt": "2026-02-08T09:34:06.488Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "REZ-USD",
+      "base_currency": "REZ",
+      "quote_currency": "USD",
+      "display_name": "REZ-USD",
+      "base_name": "Renzo",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PLUME-USD",
+      "base_currency": "PLUME",
+      "quote_currency": "USD",
+      "display_name": "PLUME-USD",
+      "base_name": "Plume",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DIMO-USD",
+      "base_currency": "DIMO",
+      "quote_currency": "USD",
+      "display_name": "DIMO-USD",
+      "base_name": "DIMO",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DAI-USD",
+      "base_currency": "DAI",
+      "quote_currency": "USD",
+      "display_name": "DAI-USD",
+      "base_name": "Dai",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "JITOSOL-USD",
+      "base_currency": "JITOSOL",
+      "quote_currency": "USD",
+      "display_name": "JITOSOL-USD",
+      "base_name": "Jito Staked SOL",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "COMP-USD",
+      "base_currency": "COMP",
+      "quote_currency": "USD",
+      "display_name": "COMP-USD",
+      "base_name": "Compound",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "A8-USD",
+      "base_currency": "A8",
+      "quote_currency": "USD",
+      "display_name": "A8-USD",
+      "base_name": "Ancient8",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SXT-USD",
+      "base_currency": "SXT",
+      "quote_currency": "USD",
+      "display_name": "SXT-USD",
+      "base_name": "Space and Time",
+      "seenAt": "2026-02-08T09:34:06.487Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "GRT-USD",
+      "base_currency": "GRT",
+      "quote_currency": "USD",
+      "display_name": "GRT-USD",
+      "base_name": "The Graph",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RECALL-USD",
+      "base_currency": "RECALL",
+      "quote_currency": "USD",
+      "display_name": "RECALL-USD",
+      "base_name": "Recall Network",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZKC-USD",
+      "base_currency": "ZKC",
+      "quote_currency": "USD",
+      "display_name": "ZKC-USD",
+      "base_name": "Boundless",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "S-USD",
+      "base_currency": "S",
+      "quote_currency": "USD",
+      "display_name": "S-USD",
+      "base_name": "Sonic",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IMU-USD",
+      "base_currency": "IMU",
+      "quote_currency": "USD",
+      "display_name": "IMU-USD",
+      "base_name": "ImmuneFi",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XPL-USD",
+      "base_currency": "XPL",
+      "quote_currency": "USD",
+      "display_name": "XPL-USD",
+      "base_name": "Plasma",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZEN-USD",
+      "base_currency": "ZEN",
+      "quote_currency": "USD",
+      "display_name": "ZEN-USD",
+      "base_name": "Horizen",
+      "seenAt": "2026-02-08T09:34:06.486Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NCT-USD",
+      "base_currency": "NCT",
+      "quote_currency": "USD",
+      "display_name": "NCT-USD",
+      "base_name": "PolySwarm",
+      "seenAt": "2026-02-08T09:34:06.485Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RED-USD",
+      "base_currency": "RED",
+      "quote_currency": "USD",
+      "display_name": "RED-USD",
+      "base_name": "Redstone",
+      "seenAt": "2026-02-08T09:34:06.485Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LPT-USD",
+      "base_currency": "LPT",
+      "quote_currency": "USD",
+      "display_name": "LPT-USD",
+      "base_name": "Livepeer",
+      "seenAt": "2026-02-08T09:34:06.485Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FUN1-USD",
+      "base_currency": "FUN1",
+      "quote_currency": "USD",
+      "display_name": "FUN1-USD",
+      "base_name": "Sport.fun",
+      "seenAt": "2026-02-08T09:34:06.485Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WELL-USD",
+      "base_currency": "WELL",
+      "quote_currency": "USD",
+      "display_name": "WELL-USD",
+      "base_name": "Moonwell",
+      "seenAt": "2026-02-08T09:34:06.485Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "STORJ-USD",
+      "base_currency": "STORJ",
+      "quote_currency": "USD",
+      "display_name": "STORJ-USD",
+      "base_name": "Storj",
+      "seenAt": "2026-02-08T09:34:06.484Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PERP-USD",
+      "base_currency": "PERP",
+      "quote_currency": "USD",
+      "display_name": "PERP-USD",
+      "base_name": "Perpetual Protocol",
+      "seenAt": "2026-02-08T09:34:06.484Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PNG-USD",
+      "base_currency": "PNG",
+      "quote_currency": "USD",
+      "display_name": "PNG-USD",
+      "base_name": "Pangolin",
+      "seenAt": "2026-02-08T09:34:06.484Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "W-USD",
+      "base_currency": "W",
+      "quote_currency": "USD",
+      "display_name": "W-USD",
+      "base_name": "Wormhole",
+      "seenAt": "2026-02-08T09:34:06.484Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ATH-USD",
+      "base_currency": "ATH",
+      "quote_currency": "USD",
+      "display_name": "ATH-USD",
+      "base_name": "Aethir",
+      "seenAt": "2026-02-08T09:34:06.484Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NOICE-USD",
+      "base_currency": "NOICE",
+      "quote_currency": "USD",
+      "display_name": "NOICE-USD",
+      "base_name": "Noice",
+      "seenAt": "2026-02-08T09:34:06.484Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LDO-USD",
+      "base_currency": "LDO",
+      "quote_currency": "USD",
+      "display_name": "LDO-USD",
+      "base_name": "Lido DAO Token",
+      "seenAt": "2026-02-08T09:34:06.483Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IMX-USD",
+      "base_currency": "IMX",
+      "quote_currency": "USD",
+      "display_name": "IMX-USD",
+      "base_name": "Immutable",
+      "seenAt": "2026-02-08T09:34:06.483Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MNDE-USD",
+      "base_currency": "MNDE",
+      "quote_currency": "USD",
+      "display_name": "MNDE-USD",
+      "base_name": "Marinade",
+      "seenAt": "2026-02-08T09:34:06.483Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WCT-USD",
+      "base_currency": "WCT",
+      "quote_currency": "USD",
+      "display_name": "WCT-USD",
+      "base_name": "WalletConnect Token",
+      "seenAt": "2026-02-08T09:34:06.483Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TREE-USD",
+      "base_currency": "TREE",
+      "quote_currency": "USD",
+      "display_name": "TREE-USD",
+      "base_name": "Treehouse",
+      "seenAt": "2026-02-08T09:34:06.483Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "EDGE-USD",
+      "base_currency": "EDGE",
+      "quote_currency": "USD",
+      "display_name": "EDGE-USD",
+      "base_name": "Definitive",
+      "seenAt": "2026-02-08T09:34:06.483Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ORCA-USD",
+      "base_currency": "ORCA",
+      "quote_currency": "USD",
+      "display_name": "ORCA-USD",
+      "base_name": "Orca",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CHZ-USD",
+      "base_currency": "CHZ",
+      "quote_currency": "USD",
+      "display_name": "CHZ-USD",
+      "base_name": "Chiliz",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PYTH-USD",
+      "base_currency": "PYTH",
+      "quote_currency": "USD",
+      "display_name": "PYTH-USD",
+      "base_name": "Pyth Network",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ETHFI-USD",
+      "base_currency": "ETHFI",
+      "quote_currency": "USD",
+      "display_name": "ETHFI-USD",
+      "base_name": "ether.fi",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DRIFT-USD",
+      "base_currency": "DRIFT",
+      "quote_currency": "USD",
+      "display_name": "DRIFT-USD",
+      "base_name": "Drift Protocol",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZAMA-USD",
+      "base_currency": "ZAMA",
+      "quote_currency": "USD",
+      "display_name": "ZAMA-USD",
+      "base_name": "Zama",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TRB-USD",
+      "base_currency": "TRB",
+      "quote_currency": "USD",
+      "display_name": "TRB-USD",
+      "base_name": "Tellor",
+      "seenAt": "2026-02-08T09:34:06.482Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RARI-USD",
+      "base_currency": "RARI",
+      "quote_currency": "USD",
+      "display_name": "RARI-USD",
+      "base_name": "Rarible",
+      "seenAt": "2026-02-08T09:34:06.481Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "USD1-USD",
+      "base_currency": "USD1",
+      "quote_currency": "USD",
+      "display_name": "USD1-USD",
+      "base_name": "World Liberty Financial USD",
+      "seenAt": "2026-02-08T09:34:06.481Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "VVV-USD",
+      "base_currency": "VVV",
+      "quote_currency": "USD",
+      "display_name": "VVV-USD",
+      "base_name": "Venice Token",
+      "seenAt": "2026-02-08T09:34:06.481Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MORPHO-USD",
+      "base_currency": "MORPHO",
+      "quote_currency": "USD",
+      "display_name": "MORPHO-USD",
+      "base_name": "Morpho",
+      "seenAt": "2026-02-08T09:34:06.481Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TURBO-USD",
+      "base_currency": "TURBO",
+      "quote_currency": "USD",
+      "display_name": "TURBO-USD",
+      "base_name": "Turbo",
+      "seenAt": "2026-02-08T09:34:06.481Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "EGLD-USD",
+      "base_currency": "EGLD",
+      "quote_currency": "USD",
+      "display_name": "EGLD-USD",
+      "base_name": "MultiversX",
+      "seenAt": "2026-02-08T09:34:06.481Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TRUST-USD",
+      "base_currency": "TRUST",
+      "quote_currency": "USD",
+      "display_name": "TRUST-USD",
+      "base_name": "Intuition",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SNX-USD",
+      "base_currency": "SNX",
+      "quote_currency": "USD",
+      "display_name": "SNX-USD",
+      "base_name": "Synthetix Network Token",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PROMPT-USD",
+      "base_currency": "PROMPT",
+      "quote_currency": "USD",
+      "display_name": "PROMPT-USD",
+      "base_name": "Wayfinder",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KEYCAT-USD",
+      "base_currency": "KEYCAT",
+      "quote_currency": "USD",
+      "display_name": "KEYCAT-USD",
+      "base_name": "Keyboard Cat",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "EIGEN-USD",
+      "base_currency": "EIGEN",
+      "quote_currency": "USD",
+      "display_name": "EIGEN-USD",
+      "base_name": "EigenCloud",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AIOZ-USD",
+      "base_currency": "AIOZ",
+      "quote_currency": "USD",
+      "display_name": "AIOZ-USD",
+      "base_name": "AIOZ Network",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KTA-USD",
+      "base_currency": "KTA",
+      "quote_currency": "USD",
+      "display_name": "KTA-USD",
+      "base_name": "Keeta",
+      "seenAt": "2026-02-08T09:34:06.480Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MANA-USD",
+      "base_currency": "MANA",
+      "quote_currency": "USD",
+      "display_name": "MANA-USD",
+      "base_name": "Decentraland",
+      "seenAt": "2026-02-08T09:34:06.479Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MANTLE-USD",
+      "base_currency": "MANTLE",
+      "quote_currency": "USD",
+      "display_name": "MANTLE-USD",
+      "base_name": "Mantle",
+      "seenAt": "2026-02-08T09:34:06.479Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BEAM-USD",
+      "base_currency": "BEAM",
+      "quote_currency": "USD",
+      "display_name": "BEAM-USD",
+      "base_name": "Beam",
+      "seenAt": "2026-02-08T09:34:06.479Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LIGHTER-USD",
+      "base_currency": "LIGHTER",
+      "quote_currency": "USD",
+      "display_name": "LIGHTER-USD",
+      "base_name": "Lighter",
+      "seenAt": "2026-02-08T09:34:06.479Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IRYS-USD",
+      "base_currency": "IRYS",
+      "quote_currency": "USD",
+      "display_name": "IRYS-USD",
+      "base_name": "Irys",
+      "seenAt": "2026-02-08T09:34:06.479Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "C98-USD",
+      "base_currency": "C98",
+      "quote_currency": "USD",
+      "display_name": "C98-USD",
+      "base_name": "Coin98",
+      "seenAt": "2026-02-08T09:34:06.479Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CVC-USD",
+      "base_currency": "CVC",
+      "quote_currency": "USD",
+      "display_name": "CVC-USD",
+      "base_name": "Civic",
+      "seenAt": "2026-02-08T09:34:06.478Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PRIME-USD",
+      "base_currency": "PRIME",
+      "quote_currency": "USD",
+      "display_name": "PRIME-USD",
+      "base_name": "Echelon Prime",
+      "seenAt": "2026-02-08T09:34:06.478Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CVX-USD",
+      "base_currency": "CVX",
+      "quote_currency": "USD",
+      "display_name": "CVX-USD",
+      "base_name": "Convex Finance",
+      "seenAt": "2026-02-08T09:34:06.478Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MOODENG-USD",
+      "base_currency": "MOODENG",
+      "quote_currency": "USD",
+      "display_name": "MOODENG-USD",
+      "base_name": "Moo Deng",
+      "seenAt": "2026-02-08T09:34:06.478Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ELSA-USD",
+      "base_currency": "ELSA",
+      "quote_currency": "USD",
+      "display_name": "ELSA-USD",
+      "base_name": "Elsa",
+      "seenAt": "2026-02-08T09:34:06.478Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BIO-USD",
+      "base_currency": "BIO",
+      "quote_currency": "USD",
+      "display_name": "BIO-USD",
+      "base_name": "Bio Protocol",
+      "seenAt": "2026-02-08T09:34:06.478Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RNBW-USD",
+      "base_currency": "RNBW",
+      "quote_currency": "USD",
+      "display_name": "RNBW-USD",
+      "base_name": "Rainbow",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SUPER-USD",
+      "base_currency": "SUPER",
+      "quote_currency": "USD",
+      "display_name": "SUPER-USD",
+      "base_name": "SuperVerse",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "KITE-USD",
+      "base_currency": "KITE",
+      "quote_currency": "USD",
+      "display_name": "KITE-USD",
+      "base_name": "Kite",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "COW-USD",
+      "base_currency": "COW",
+      "quote_currency": "USD",
+      "display_name": "COW-USD",
+      "base_name": "CoW Protocol",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AUCTION-USD",
+      "base_currency": "AUCTION",
+      "quote_currency": "USD",
+      "display_name": "AUCTION-USD",
+      "base_name": "Bounce Token",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SPK-USD",
+      "base_currency": "SPK",
+      "quote_currency": "USD",
+      "display_name": "SPK-USD",
+      "base_name": "Spark",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WET-USD",
+      "base_currency": "WET",
+      "quote_currency": "USD",
+      "display_name": "WET-USD",
+      "base_name": "Humidifi",
+      "seenAt": "2026-02-08T09:34:06.477Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MAGIC-USD",
+      "base_currency": "MAGIC",
+      "quote_currency": "USD",
+      "display_name": "MAGIC-USD",
+      "base_name": "MAGIC",
+      "seenAt": "2026-02-08T09:34:06.476Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ENS-USD",
+      "base_currency": "ENS",
+      "quote_currency": "USD",
+      "display_name": "ENS-USD",
+      "base_name": "Ethereum Name Service",
+      "seenAt": "2026-02-08T09:34:06.476Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WLD-USD",
+      "base_currency": "WLD",
+      "quote_currency": "USD",
+      "display_name": "WLD-USD",
+      "base_name": "Worldcoin",
+      "seenAt": "2026-02-08T09:34:06.476Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "EUL-USD",
+      "base_currency": "EUL",
+      "quote_currency": "USD",
+      "display_name": "EUL-USD",
+      "base_name": "Euler",
+      "seenAt": "2026-02-08T09:34:06.476Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MET-USD",
+      "base_currency": "MET",
+      "quote_currency": "USD",
+      "display_name": "MET-USD",
+      "base_name": "Meteora",
+      "seenAt": "2026-02-08T09:34:06.476Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PRCL-USD",
+      "base_currency": "PRCL",
+      "quote_currency": "USD",
+      "display_name": "PRCL-USD",
+      "base_name": "Parcl",
+      "seenAt": "2026-02-08T09:34:06.475Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XTZ-USD",
+      "base_currency": "XTZ",
+      "quote_currency": "USD",
+      "display_name": "XTZ-USD",
+      "base_name": "Tezos",
+      "seenAt": "2026-02-08T09:34:06.475Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "POPCAT-USD",
+      "base_currency": "POPCAT",
+      "quote_currency": "USD",
+      "display_name": "POPCAT-USD",
+      "base_name": "Popcat (SOL)",
+      "seenAt": "2026-02-08T09:34:06.475Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AMP-USD",
+      "base_currency": "AMP",
+      "quote_currency": "USD",
+      "display_name": "AMP-USD",
+      "base_name": "Amp",
+      "seenAt": "2026-02-08T09:34:06.475Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NEON-USD",
+      "base_currency": "NEON",
+      "quote_currency": "USD",
+      "display_name": "NEON-USD",
+      "base_name": "Neon EVM",
+      "seenAt": "2026-02-08T09:34:06.475Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZRX-USD",
+      "base_currency": "ZRX",
+      "quote_currency": "USD",
+      "display_name": "ZRX-USD",
+      "base_name": "0x Protocol",
+      "seenAt": "2026-02-08T09:34:06.475Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AXS-USD",
+      "base_currency": "AXS",
+      "quote_currency": "USD",
+      "display_name": "AXS-USD",
+      "base_name": "Axie Infinity",
+      "seenAt": "2026-02-08T09:34:06.474Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PROVE-USD",
+      "base_currency": "PROVE",
+      "quote_currency": "USD",
+      "display_name": "PROVE-USD",
+      "base_name": "Succinct",
+      "seenAt": "2026-02-08T09:34:06.474Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "VET-USD",
+      "base_currency": "VET",
+      "quote_currency": "USD",
+      "display_name": "VET-USD",
+      "base_name": "vechain",
+      "seenAt": "2026-02-08T09:34:06.474Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TRUMP-USD",
+      "base_currency": "TRUMP",
+      "quote_currency": "USD",
+      "display_name": "TRUMP-USD",
+      "base_name": "OFFICIAL TRUMP",
+      "seenAt": "2026-02-08T09:34:06.474Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XCN-USD",
+      "base_currency": "XCN",
+      "quote_currency": "USD",
+      "display_name": "XCN-USD",
+      "base_name": "Onyxcoin",
+      "seenAt": "2026-02-08T09:34:06.474Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "APT-USD",
+      "base_currency": "APT",
+      "quote_currency": "USD",
+      "display_name": "APT-USD",
+      "base_name": "Aptos",
+      "seenAt": "2026-02-08T09:34:06.473Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZK-USD",
+      "base_currency": "ZK",
+      "quote_currency": "USD",
+      "display_name": "ZK-USD",
+      "base_name": "ZKsync",
+      "seenAt": "2026-02-08T09:34:06.473Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SWELL-USD",
+      "base_currency": "SWELL",
+      "quote_currency": "USD",
+      "display_name": "SWELL-USD",
+      "base_name": "SWELL",
+      "seenAt": "2026-02-08T09:34:06.473Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SAND-USD",
+      "base_currency": "SAND",
+      "quote_currency": "USD",
+      "display_name": "SAND-USD",
+      "base_name": "The Sandbox",
+      "seenAt": "2026-02-08T09:34:06.473Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TIA-USD",
+      "base_currency": "TIA",
+      "quote_currency": "USD",
+      "display_name": "TIA-USD",
+      "base_name": "Celestia",
+      "seenAt": "2026-02-08T09:34:06.473Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DOGINME-USD",
+      "base_currency": "DOGINME",
+      "quote_currency": "USD",
+      "display_name": "DOGINME-USD",
+      "base_name": "doginme",
+      "seenAt": "2026-02-08T09:34:06.473Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NMR-USD",
+      "base_currency": "NMR",
+      "quote_currency": "USD",
+      "display_name": "NMR-USD",
+      "base_name": "Numeraire",
+      "seenAt": "2026-02-08T09:34:06.472Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FIGHT-USD",
+      "base_currency": "FIGHT",
+      "quote_currency": "USD",
+      "display_name": "FIGHT-USD",
+      "base_name": "FIGHT",
+      "seenAt": "2026-02-08T09:34:06.472Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SENT-USD",
+      "base_currency": "SENT",
+      "quote_currency": "USD",
+      "display_name": "SENT-USD",
+      "base_name": "Sentient",
+      "seenAt": "2026-02-08T09:34:06.472Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TON-USD",
+      "base_currency": "TON",
+      "quote_currency": "USD",
+      "display_name": "TON-USD",
+      "base_name": "Toncoin",
+      "seenAt": "2026-02-08T09:34:06.472Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZORA-USD",
+      "base_currency": "ZORA",
+      "quote_currency": "USD",
+      "display_name": "ZORA-USD",
+      "base_name": "Zora",
+      "seenAt": "2026-02-08T09:34:06.472Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BIRB-USD",
+      "base_currency": "BIRB",
+      "quote_currency": "USD",
+      "display_name": "BIRB-USD",
+      "base_name": "Moonbirds",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "API3-USD",
+      "base_currency": "API3",
+      "quote_currency": "USD",
+      "display_name": "API3-USD",
+      "base_name": "Api3",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AVNT-USD",
+      "base_currency": "AVNT",
+      "quote_currency": "USD",
+      "display_name": "AVNT-USD",
+      "base_name": "Avantis",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CBETH-USD",
+      "base_currency": "CBETH",
+      "quote_currency": "USD",
+      "display_name": "CBETH-USD",
+      "base_name": "Coinbase Wrapped Staked ETH",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CRO-USD",
+      "base_currency": "CRO",
+      "quote_currency": "USD",
+      "display_name": "CRO-USD",
+      "base_name": "Cronos",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "STRK-USD",
+      "base_currency": "STRK",
+      "quote_currency": "USD",
+      "display_name": "STRK-USD",
+      "base_name": "Starknet Token",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FET-USD",
+      "base_currency": "FET",
+      "quote_currency": "USD",
+      "display_name": "FET-USD",
+      "base_name": "Artificial Superintelligence Alliance",
+      "seenAt": "2026-02-08T09:34:06.471Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FLR-USD",
+      "base_currency": "FLR",
+      "quote_currency": "USD",
+      "display_name": "FLR-USD",
+      "base_name": "Flare",
+      "seenAt": "2026-02-08T09:34:06.470Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SYRUP-USD",
+      "base_currency": "SYRUP",
+      "quote_currency": "USD",
+      "display_name": "SYRUP-USD",
+      "base_name": "Maple Finance",
+      "seenAt": "2026-02-08T09:34:06.470Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PENDLE-USD",
+      "base_currency": "PENDLE",
+      "quote_currency": "USD",
+      "display_name": "PENDLE-USD",
+      "base_name": "Pendle",
+      "seenAt": "2026-02-08T09:34:06.470Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SWFTC-USD",
+      "base_currency": "SWFTC",
+      "quote_currency": "USD",
+      "display_name": "SWFTC-USD",
+      "base_name": "SwftCoin",
+      "seenAt": "2026-02-08T09:34:06.470Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "OP-USD",
+      "base_currency": "OP",
+      "quote_currency": "USD",
+      "display_name": "OP-USD",
+      "base_name": "Optimism",
+      "seenAt": "2026-02-08T09:34:06.470Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SPX-USD",
+      "base_currency": "SPX",
+      "quote_currency": "USD",
+      "display_name": "SPX-USD",
+      "base_name": "SPX6900",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TOSHI-USD",
+      "base_currency": "TOSHI",
+      "quote_currency": "USD",
+      "display_name": "TOSHI-USD",
+      "base_name": "Toshi",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "JASMY-USD",
+      "base_currency": "JASMY",
+      "quote_currency": "USD",
+      "display_name": "JASMY-USD",
+      "base_name": "Jasmy",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "INJ-USD",
+      "base_currency": "INJ",
+      "quote_currency": "USD",
+      "display_name": "INJ-USD",
+      "base_name": "Injective",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ETC-USD",
+      "base_currency": "ETC",
+      "quote_currency": "USD",
+      "display_name": "ETC-USD",
+      "base_name": "Ethereum Classic",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WIF-USD",
+      "base_currency": "WIF",
+      "quote_currency": "USD",
+      "display_name": "WIF-USD",
+      "base_name": "dogwifhat",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "STX-USD",
+      "base_currency": "STX",
+      "quote_currency": "USD",
+      "display_name": "STX-USD",
+      "base_name": "Stacks",
+      "seenAt": "2026-02-08T09:34:06.469Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ROSE-USD",
+      "base_currency": "ROSE",
+      "quote_currency": "USD",
+      "display_name": "ROSE-USD",
+      "base_name": "Oasis Network",
+      "seenAt": "2026-02-08T09:34:06.468Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZRO-USD",
+      "base_currency": "ZRO",
+      "quote_currency": "USD",
+      "display_name": "ZRO-USD",
+      "base_name": "LayerZero",
+      "seenAt": "2026-02-08T09:34:06.468Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SEI-USD",
+      "base_currency": "SEI",
+      "quote_currency": "USD",
+      "display_name": "SEI-USD",
+      "base_name": "Sei",
+      "seenAt": "2026-02-08T09:34:06.468Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "JTO-USD",
+      "base_currency": "JTO",
+      "quote_currency": "USD",
+      "display_name": "JTO-USD",
+      "base_name": "Jito",
+      "seenAt": "2026-02-08T09:34:06.468Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "POL-USD",
+      "base_currency": "POL",
+      "quote_currency": "USD",
+      "display_name": "POL-USD",
+      "base_name": "Polygon Ecosystem Token",
+      "seenAt": "2026-02-08T09:34:06.468Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "QNT-USD",
+      "base_currency": "QNT",
+      "quote_currency": "USD",
+      "display_name": "QNT-USD",
+      "base_name": "Quant",
+      "seenAt": "2026-02-08T09:34:06.468Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CLANKER-USD",
+      "base_currency": "CLANKER",
+      "quote_currency": "USD",
+      "display_name": "CLANKER-USD",
+      "base_name": "tokenbot",
+      "seenAt": "2026-02-08T09:34:06.467Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "IP-USD",
+      "base_currency": "IP",
+      "quote_currency": "USD",
+      "display_name": "IP-USD",
+      "base_name": "Story",
+      "seenAt": "2026-02-08T09:34:06.467Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TRIA-USD",
+      "base_currency": "TRIA",
+      "quote_currency": "USD",
+      "display_name": "TRIA-USD",
+      "base_name": "TRIA",
+      "seenAt": "2026-02-08T09:34:06.467Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "USELESS-USD",
+      "base_currency": "USELESS",
+      "quote_currency": "USD",
+      "display_name": "USELESS-USD",
+      "base_name": "Useless Coin",
+      "seenAt": "2026-02-08T09:34:06.467Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LA-USD",
+      "base_currency": "LA",
+      "quote_currency": "USD",
+      "display_name": "LA-USD",
+      "base_name": "Lagrange",
+      "seenAt": "2026-02-08T09:34:06.467Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FIL-USD",
+      "base_currency": "FIL",
+      "quote_currency": "USD",
+      "display_name": "FIL-USD",
+      "base_name": "Filecoin",
+      "seenAt": "2026-02-08T09:34:06.467Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ATOM-USD",
+      "base_currency": "ATOM",
+      "quote_currency": "USD",
+      "display_name": "ATOM-USD",
+      "base_name": "Cosmos",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ALGO-USD",
+      "base_currency": "ALGO",
+      "quote_currency": "USD",
+      "display_name": "ALGO-USD",
+      "base_name": "Algorand",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ENA-USD",
+      "base_currency": "ENA",
+      "quote_currency": "USD",
+      "display_name": "ENA-USD",
+      "base_name": "Ethena",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "CRV-USD",
+      "base_currency": "CRV",
+      "quote_currency": "USD",
+      "display_name": "CRV-USD",
+      "base_name": "Curve DAO Token",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BREV-USD",
+      "base_currency": "BREV",
+      "quote_currency": "USD",
+      "display_name": "BREV-USD",
+      "base_name": "Brevis",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SKR-USD",
+      "base_currency": "SKR",
+      "quote_currency": "USD",
+      "display_name": "SKR-USD",
+      "base_name": "Seeker",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SHIB-USD",
+      "base_currency": "SHIB",
+      "quote_currency": "USD",
+      "display_name": "SHIB-USD",
+      "base_name": "SHIBA INU",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BERA-USD",
+      "base_currency": "BERA",
+      "quote_currency": "USD",
+      "display_name": "BERA-USD",
+      "base_name": "Berachain",
+      "seenAt": "2026-02-08T09:34:06.466Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "RENDER-USD",
+      "base_currency": "RENDER",
+      "quote_currency": "USD",
+      "display_name": "RENDER-USD",
+      "base_name": "Render",
+      "seenAt": "2026-02-08T09:34:06.465Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ASTER-USD",
+      "base_currency": "ASTER",
+      "quote_currency": "USD",
+      "display_name": "ASTER-USD",
+      "base_name": "Aster",
+      "seenAt": "2026-02-08T09:34:06.465Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "UNI-USD",
+      "base_currency": "UNI",
+      "quote_currency": "USD",
+      "display_name": "UNI-USD",
+      "base_name": "Uniswap",
+      "seenAt": "2026-02-08T09:34:06.465Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DASH-USD",
+      "base_currency": "DASH",
+      "quote_currency": "USD",
+      "display_name": "DASH-USD",
+      "base_name": "Dash",
+      "seenAt": "2026-02-08T09:34:06.465Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PAXG-USD",
+      "base_currency": "PAXG",
+      "quote_currency": "USD",
+      "display_name": "PAXG-USD",
+      "base_name": "PAX Gold",
+      "seenAt": "2026-02-08T09:34:06.465Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ARB-USD",
+      "base_currency": "ARB",
+      "quote_currency": "USD",
+      "display_name": "ARB-USD",
+      "base_name": "Arbitrum",
+      "seenAt": "2026-02-08T09:34:06.465Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "NEAR-USD",
+      "base_currency": "NEAR",
+      "quote_currency": "USD",
+      "display_name": "NEAR-USD",
+      "base_name": "NEAR Protocol",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PEPE-USD",
+      "base_currency": "PEPE",
+      "quote_currency": "USD",
+      "display_name": "PEPE-USD",
+      "base_name": "Pepe",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AERO-USD",
+      "base_currency": "AERO",
+      "quote_currency": "USD",
+      "display_name": "AERO-USD",
+      "base_name": "Aerodrome Finance",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BONK-USD",
+      "base_currency": "BONK",
+      "quote_currency": "USD",
+      "display_name": "BONK-USD",
+      "base_name": "Bonk",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BNB-USD",
+      "base_currency": "BNB",
+      "quote_currency": "USD",
+      "display_name": "BNB-USD",
+      "base_name": "BNB",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ICP-USD",
+      "base_currency": "ICP",
+      "quote_currency": "USD",
+      "display_name": "ICP-USD",
+      "base_name": "Internet Computer",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DOT-USD",
+      "base_currency": "DOT",
+      "quote_currency": "USD",
+      "display_name": "DOT-USD",
+      "base_name": "Polkadot",
+      "seenAt": "2026-02-08T09:34:06.464Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "WLFI-USD",
+      "base_currency": "WLFI",
+      "quote_currency": "USD",
+      "display_name": "WLFI-USD",
+      "base_name": "World Liberty Financial",
+      "seenAt": "2026-02-08T09:34:06.463Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PENGU-USD",
+      "base_currency": "PENGU",
+      "quote_currency": "USD",
+      "display_name": "PENGU-USD",
+      "base_name": "Pudgy Penguins",
+      "seenAt": "2026-02-08T09:34:06.463Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AAVE-USD",
+      "base_currency": "AAVE",
+      "quote_currency": "USD",
+      "display_name": "AAVE-USD",
+      "base_name": "Aave",
+      "seenAt": "2026-02-08T09:34:06.463Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "AVAX-USD",
+      "base_currency": "AVAX",
+      "quote_currency": "USD",
+      "display_name": "AVAX-USD",
+      "base_name": "Avalanche",
+      "seenAt": "2026-02-08T09:34:06.463Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "FARTCOIN-USD",
+      "base_currency": "FARTCOIN",
+      "quote_currency": "USD",
+      "display_name": "FARTCOIN-USD",
+      "base_name": "Fartcoin",
+      "seenAt": "2026-02-08T09:34:06.463Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SKY-USD",
+      "base_currency": "SKY",
+      "quote_currency": "USD",
+      "display_name": "SKY-USD",
+      "base_name": "Sky",
+      "seenAt": "2026-02-08T09:34:06.463Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ONDO-USD",
+      "base_currency": "ONDO",
+      "quote_currency": "USD",
+      "display_name": "ONDO-USD",
+      "base_name": "Ondo",
+      "seenAt": "2026-02-08T09:34:06.462Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XLM-USD",
+      "base_currency": "XLM",
+      "quote_currency": "USD",
+      "display_name": "XLM-USD",
+      "base_name": "Stellar Lumens",
+      "seenAt": "2026-02-08T09:34:06.462Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "MON-USD",
+      "base_currency": "MON",
+      "quote_currency": "USD",
+      "display_name": "MON-USD",
+      "base_name": "Monad",
+      "seenAt": "2026-02-08T09:34:06.462Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "TAO-USD",
+      "base_currency": "TAO",
+      "quote_currency": "USD",
+      "display_name": "TAO-USD",
+      "base_name": "Bittensor",
+      "seenAt": "2026-02-08T09:34:06.462Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "PUMP-USD",
+      "base_currency": "PUMP",
+      "quote_currency": "USD",
+      "display_name": "PUMP-USD",
+      "base_name": "Pump.fun",
+      "seenAt": "2026-02-08T09:34:06.462Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HYPE-USD",
+      "base_currency": "HYPE",
+      "quote_currency": "USD",
+      "display_name": "HYPE-USD",
+      "base_name": "Hyperliquid",
+      "seenAt": "2026-02-08T09:34:06.462Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BNKR-USD",
+      "base_currency": "BNKR",
+      "quote_currency": "USD",
+      "display_name": "BNKR-USD",
+      "base_name": "BankrCoin",
+      "seenAt": "2026-02-08T09:34:06.461Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "HBAR-USD",
+      "base_currency": "HBAR",
+      "quote_currency": "USD",
+      "display_name": "HBAR-USD",
+      "base_name": "Hedera",
+      "seenAt": "2026-02-08T09:34:06.461Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LTC-USD",
+      "base_currency": "LTC",
+      "quote_currency": "USD",
+      "display_name": "LTC-USD",
+      "base_name": "Litecoin",
+      "seenAt": "2026-02-08T09:34:06.461Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BCH-USD",
+      "base_currency": "BCH",
+      "quote_currency": "USD",
+      "display_name": "BCH-USD",
+      "base_name": "Bitcoin Cash",
+      "seenAt": "2026-02-08T09:34:06.461Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SUI-USD",
+      "base_currency": "SUI",
+      "quote_currency": "USD",
+      "display_name": "SUI-USD",
+      "base_name": "SUI",
+      "seenAt": "2026-02-08T09:34:06.461Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ADA-USD",
+      "base_currency": "ADA",
+      "quote_currency": "USD",
+      "display_name": "ADA-USD",
+      "base_name": "Cardano",
+      "seenAt": "2026-02-08T09:34:06.461Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "USDT-USD",
+      "base_currency": "USDT",
+      "quote_currency": "USD",
+      "display_name": "USDT-USD",
+      "base_name": "Tether",
+      "seenAt": "2026-02-08T09:34:06.460Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ZEC-USD",
+      "base_currency": "ZEC",
+      "quote_currency": "USD",
+      "display_name": "ZEC-USD",
+      "base_name": "Zcash",
+      "seenAt": "2026-02-08T09:34:06.460Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "DOGE-USD",
+      "base_currency": "DOGE",
+      "quote_currency": "USD",
+      "display_name": "DOGE-USD",
+      "base_name": "Dogecoin",
+      "seenAt": "2026-02-08T09:34:06.460Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "LINK-USD",
+      "base_currency": "LINK",
+      "quote_currency": "USD",
+      "display_name": "LINK-USD",
+      "base_name": "Chainlink",
+      "seenAt": "2026-02-08T09:34:06.460Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "SOL-USD",
+      "base_currency": "SOL",
+      "quote_currency": "USD",
+      "display_name": "SOL-USD",
+      "base_name": "Solana",
+      "seenAt": "2026-02-08T09:34:06.460Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "XRP-USD",
+      "base_currency": "XRP",
+      "quote_currency": "USD",
+      "display_name": "XRP-USD",
+      "base_name": "XRP",
+      "seenAt": "2026-02-08T09:34:06.459Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "ETH-USD",
+      "base_currency": "ETH",
+      "quote_currency": "USD",
+      "display_name": "ETH-USD",
+      "base_name": "Ethereum",
+      "seenAt": "2026-02-08T09:34:06.459Z",
+      "status": "online",
+      "trading_enabled": true
+    },
+    {
+      "product_id": "BTC-USD",
+      "base_currency": "BTC",
+      "quote_currency": "USD",
+      "display_name": "BTC-USD",
+      "base_name": "Bitcoin",
+      "seenAt": "2026-02-08T09:34:06.457Z",
+      "status": "online",
+      "trading_enabled": true
+    }
+  ]
+}

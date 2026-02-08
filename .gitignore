@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Python
+python-signal/.venv/
+python-signal/venv/
+__pycache__/
+*.pyc
+*.pyo
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

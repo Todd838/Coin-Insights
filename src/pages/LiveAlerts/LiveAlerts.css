@@ -1,0 +1,405 @@
+.live-alerts {
+  padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ==================== FULL-SCREEN ANIMATIONS ==================== */
+.animation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Fire Animation */
+.fire-animation {
+  background: radial-gradient(circle, rgba(255,68,0,0.1) 0%, transparent 70%);
+}
+
+.fire-particle {
+  position: absolute;
+  font-size: 40px;
+  animation: fireRise ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255,68,0,0.8));
+  opacity: 0.9;
+}
+
+@keyframes fireRise {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 110vh;
+    opacity: 0;
+    transform: scale(1.5) rotate(180deg);
+  }
+}
+
+/* Thunder Animation */
+.thunder-animation {
+  background: rgba(0, 0, 0, 0.3);
+  animation: thunderFlash 0.5s ease-in-out 6;
+}
+
+@keyframes thunderFlash {
+  0%, 100% { background: rgba(0, 0, 0, 0.3); }
+  10%, 30%, 50% { background: rgba(255, 255, 255, 0.6); }
+  20%, 40% { background: rgba(255, 170, 0, 0.4); }
+}
+
+.lightning-bolt {
+  position: absolute;
+  font-size: 60px;
+  animation: lightningStrike 0.5s ease-out;
+  filter: drop-shadow(0 0 15px rgba(255,255,0,1));
+  opacity: 0;
+}
+
+@keyframes lightningStrike {
+  0% {
+    top: -50px;
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    top: 50vh;
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Falling Arrows Animation */
+.arrows-animation {
+  background: radial-gradient(circle, rgba(255,0,0,0.05) 0%, transparent 70%);
+}
+
+.falling-arrow {
+  position: absolute;
+  top: -50px;
+  font-size: 35px;
+  animation: arrowFall linear;
+  filter: drop-shadow(0 0 8px rgba(255,0,0,0.8));
+}
+
+@keyframes arrowFall {
+  0% {
+    top: -50px;
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    top: 110vh;
+    opacity: 0.5;
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+/* Floating Z's Animation */
+.zs-animation {
+  background: radial-gradient(circle, rgba(100,100,100,0.05) 0%, transparent 70%);
+}
+
+.floating-z {
+  position: absolute;
+  bottom: -50px;
+  animation: zFloat ease-in-out;
+  opacity: 0.8;
+  color: #888;
+}
+
+@keyframes zFloat {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(30px) rotate(20deg);
+  }
+  100% {
+    bottom: 110vh;
+    opacity: 0;
+    transform: translateX(-30px) rotate(-20deg);
+  }
+}
+
+/* ==================== HEADER ==================== */
+.alerts-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.alerts-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.alerts-header .subtitle {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.alerts-header .connection-status {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.alerts-header .connection-status span {
+  background: rgba(255,255,255,0.05);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #aaa;
+}
+
+/* ==================== NO ALERTS STATE ==================== */
+.no-alerts {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+
+.no-alerts h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.waiting-animation {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pulse {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.waiting-animation span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ==================== SECTIONS LAYOUT ==================== */
+.alerts-sections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.alert-section {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1a1a1a;
+  min-height: 500px;
+}
+
+/* Section Headers */
+.section-header {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section-header h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+}
+
+.section-header .count {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.section-header p {
+  margin: 5px 0 0 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.section-header.explosive {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.3) 0%, rgba(204, 0, 0, 0.3) 100%);
+  border-bottom: 3px solid #ff4444;
+}
+
+.section-header.hot {
+  background: linear-gradient(135deg, rgba(255, 170, 0, 0.3) 0%, rgba(255, 102, 0, 0.3) 100%);
+  border-bottom: 3px solid #ffaa00;
+}
+
+.section-header.low {
+  background: linear-gradient(135deg, rgba(68, 68, 255, 0.3) 0%, rgba(0, 0, 204, 0.3) 100%);
+  border-bottom: 3px solid #4444ff;
+}
+
+.section-header.stagnant {
+  background: linear-gradient(135deg, rgba(136, 136, 136, 0.3) 0%, rgba(85, 85, 85, 0.3) 100%);
+  border-bottom: 3px solid #888888;
+}
+
+/* Alert Items */
+.section-alerts {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  max-height: 600px;
+}
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+  animation: slideInAlert 0.3s ease-out;
+}
+
+@keyframes slideInAlert {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.alert-item:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(5px);
+}
+
+.alert-item.explosive {
+  border-left-color: #ff4444;
+}
+
+.alert-item.hot {
+  border-left-color: #ffaa00;
+}
+
+.alert-item.low {
+  border-left-color: #4444ff;
+}
+
+.alert-item.stagnant {
+  border-left-color: #888888;
+}
+
+.alert-symbol {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: monospace;
+}
+
+.alert-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.alert-details .vol {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.alert-item.explosive .vol {
+  color: #ff4444;
+}
+
+.alert-item.hot .vol {
+  color: #ffaa00;
+}
+
+.alert-item.low .vol {
+  color: #4444ff;
+}
+
+.alert-item.stagnant .vol {
+  color: #888888;
+}
+
+.alert-details .time {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.empty-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #555;
+  font-style: italic;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1200px) {
+  .alerts-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .alerts-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .alert-section {
+    min-height: 300px;
+  }
+  
+  .section-alerts {
+    max-height: 400px;
+  }
+}
+

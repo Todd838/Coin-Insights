@@ -8,14 +8,11 @@ const Home = () => {
 const {allCoin, currency} = useContext(CoinContext);
 const [displayCoin, setDisplayCoin] = useState([]);
 const [input, setInput] = useState('');
-
-useEffect(() => {
-    setDisplayCoin(allCoin);
-}, [allCoin]);
+const [livePrices, setLivePrices] = useState({});
 
 const inputHandler = (event)=>{
     setInput(event.target.value);
-    if(event.target.value === ""){
+    if (event.target.value === ''){
         setDisplayCoin(allCoin);
     }
 }
@@ -26,23 +23,62 @@ const searchHandler = async (event)=>{
         return item.name.toLowerCase().includes(input.toLowerCase())
     })
     setDisplayCoin(coins);
+   
 }
+
+useEffect(() => {
+    setDisplayCoin(allCoin);
+}, [allCoin]);
+
+// WebSocket integration for live prices and alerts
+useEffect(() => {
+    const ws = new WebSocket('ws://localhost:3001'); // Node gateway
+    
+    ws.onopen = () => {
+        console.log('✅ WebSocket connected to Node gateway');
+    };
+    
+    ws.onmessage = (event) => {
+        try {
+            const msg = JSON.parse(event.data);
+            if (msg.type === 'prices') {
+                // Batch update prices from Coinbase
+                const newPrices = {};
+                msg.updates.forEach(u => {
+                    newPrices[u.symbol] = u.price;
+                });
+                setLivePrices(prev => ({ ...prev, ...newPrices }));
+            }
+        } catch (e) {
+            // Ignore malformed messages
+        }
+    };
+    
+    ws.onerror = (error) => {
+        console.error('❌ WebSocket error:', error);
+    };
+    
+    ws.onclose = () => {
+        console.log('⚠️ WebSocket disconnected');
+    };
+    
+    return () => ws.close();
+}, []);
+
+
+
 
   return (
     <div className='home'>
         <div className="hero">
-            <h1>Largest <br/> Crypto Marketplace</h1>
-            <p>Buy and sell digital assets with confidence on our secure platform. Sign
-                up to learn more about crypto coins and their currencies!</p>
+            <h1>Coin Insights</h1>
+            <p>Track, search, and analyze the top cryptocurrencies in real time.</p>
             <form onSubmit={searchHandler}>
-
                 <input onChange={inputHandler} list='coinlist' value={input} type="text" 
                 placeholder='Search crypto..' required/>
-
                 <datalist id='coinlist'>
                     {allCoin.map((item, index)=>(<option key={index} value={item.name}/>))}
                 </datalist>
-
                 <button type="submit">Search</button>
             </form>
         </div>
@@ -62,7 +98,11 @@ const searchHandler = async (event)=>{
                     <img src={item.image} alt="" />
                         <p>{item.name + " - " + item.symbol}</p>
                     </div>
-                    <p>{currency.symbol}{item.current_price.toLocaleString()}</p>
+                    <p>{currency.symbol}{
+                        livePrices[item.symbol?.toUpperCase()] ?
+                            Number(livePrices[item.symbol?.toUpperCase()]).toLocaleString() :
+                            item.current_price.toLocaleString()
+                    }</p>
                     <p className={item.price_change_percentage_24h > 0 ? "green" : "red"}>
                         {Math.floor(item.price_change_percentage_24h * 100) / 100}
                     </p>
@@ -70,10 +110,9 @@ const searchHandler = async (event)=>{
                 </Link>
             ))
            }
-
         </div>
     </div>
   )
-}
 
+}
 export default Home
