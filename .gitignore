@@ -12,9 +12,10 @@ dist
 dist-ssr
 *.local
 
-# Python
-python-signal/.venv/
-python-signal/venv/
+# Python virtual environments
+*/.venv/
+.venv/
+venv/
 __pycache__/
 *.pyc
 *.pyo
