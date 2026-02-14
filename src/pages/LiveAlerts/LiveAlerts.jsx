@@ -1,10 +1,90 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { auth } from '../../firebase';
+import { CoinContext } from '../../context/CoinContext';
 import './LiveAlerts.css';
+
 
 const LiveAlerts = () => {
   const [alerts, setAlerts] = useState([]);
   const [ws, setWs] = useState(null);
   const [activeAnimation, setActiveAnimation] = useState(null);
+  const [watchlist, setWatchlist] = useState({ categories: { "CoinGecko": [], "Dex/OnChain": [], "CoinBase": [] } });
+  const [activeCategories, setActiveCategories] = useState({ "CoinGecko": true, "Dex/OnChain": true, "CoinBase": true });
+
+  // Access CoinGecko coin data for name mapping
+  const { allCoin } = useContext(CoinContext);
+
+  // Map symbol to coin name
+  const getCoinName = (symbol) => {
+    // Remove USDT suffix to get base symbol
+    const baseSymbol = symbol.replace('USDT', '').toLowerCase();
+
+    // Find coin in CoinGecko data
+    const coin = allCoin.find(c => c.symbol.toLowerCase() === baseSymbol);
+
+    if (coin) {
+      return coin.name;
+    }
+
+    // Fallback: return symbol without USDT
+    return symbol.replace('USDT', '');
+  };
+
+  // Fetch user's watchlist
+  useEffect(() => {
+    fetchWatchlist();
+    const interval = setInterval(() => {
+      fetchWatchlist();
+    }, 10000); // Poll every 10 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  const fetchWatchlist = async () => {
+    const userId = auth.currentUser?.uid;
+    if (!userId) {
+      console.log('No user logged in, Live Alerts will show all coins');
+      return;
+    }
+
+    try {
+      const res = await fetch(`http://localhost:3003/api/watchlist?userId=${userId}`);
+      const data = await res.json();
+      if (data.categories) {
+        setWatchlist(data);
+        console.log('✅ Watchlist loaded for alerts:', {
+          CoinGecko: data.categories['CoinGecko']?.length || 0,
+          'Dex/OnChain': data.categories['Dex/OnChain']?.length || 0,
+          CoinBase: data.categories['CoinBase']?.length || 0
+        });
+      }
+    } catch (e) {
+      console.error('Failed to fetch watchlist:', e);
+    }
+  };
+
+  // Get all symbols from active categories
+  const getMonitoredSymbols = () => {
+    const symbols = new Set();
+
+    if (activeCategories.CoinGecko) {
+      watchlist.categories['CoinGecko']?.forEach(symbol => symbols.add(symbol));
+    }
+    if (activeCategories['Dex/OnChain']) {
+      watchlist.categories['Dex/OnChain']?.forEach(symbol => symbols.add(symbol));
+    }
+    if (activeCategories.CoinBase) {
+      watchlist.categories['CoinBase']?.forEach(symbol => symbols.add(symbol));
+    }
+
+    return symbols;
+  };
+
+  const toggleCategory = (category) => {
+    setActiveCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
 
   useEffect(() => {
     let socket = null;
@@ -21,24 +101,38 @@ const LiveAlerts = () => {
       
       socket.onmessage = (event) => {
         const msg = JSON.parse(event.data);
-        
+
         if (msg.type === 'alerts' && msg.alerts) {
           console.log('🚨 Received alerts:', msg.alerts);
-          
+
+          // Filter alerts to only include coins in active watchlist categories
+          const monitoredSymbols = getMonitoredSymbols();
+
+          const filteredAlerts = msg.alerts.filter(alert => {
+            // If no watchlist or user not logged in, show all alerts
+            if (monitoredSymbols.size === 0) return true;
+            // Otherwise only show alerts for watchlist coins
+            return monitoredSymbols.has(alert.symbol);
+          });
+
+          if (filteredAlerts.length > 0) {
+            console.log(`✅ Showing ${filteredAlerts.length} of ${msg.alerts.length} alerts (filtered by watchlist)`);
+          }
+
           // Add timestamps and merge with existing alerts
-          const newAlerts = msg.alerts.map(alert => ({
+          const newAlerts = filteredAlerts.map(alert => ({
             ...alert,
             timestamp: Date.now(),
             id: `${alert.symbol}-${Date.now()}-${Math.random()}`
           }));
-          
+
           // Trigger animation for the first new alert
           if (newAlerts.length > 0) {
             const firstAlert = newAlerts[0];
             setActiveAnimation(firstAlert.level);
             setTimeout(() => setActiveAnimation(null), 3000); // Clear after 3 seconds
           }
-          
+
           setAlerts(prev => {
             // Keep last 200 alerts
             const combined = [...newAlerts, ...prev].slice(0, 200);
@@ -139,13 +233,40 @@ const LiveAlerts = () => {
 
       <div className="alerts-header">
         <h1>🚨 Live Volatility Alerts</h1>
-        <p className="subtitle">Real-time alerts organized by type - Animations trigger on new alerts!</p>
+        <p className="subtitle">Real-time volatility monitoring for your watchlist coins</p>
         <div className="connection-status">
           <span>WebSocket: {ws && ws.readyState === WebSocket.OPEN ? '✅ Connected' : '⚠️ Disconnected'}</span>
           <span>Total Alerts: {alerts.length}</span>
+          <span>Monitoring: {getMonitoredSymbols().size} coins</span>
+        </div>
+
+        {/* Category Filter Toggles */}
+        <div className="category-filters">
+          <h3>Monitor Categories:</h3>
+          <div className="filter-buttons">
+            <button
+              className={`filter-btn ${activeCategories.CoinGecko ? 'active' : 'inactive'}`}
+              onClick={() => toggleCategory('CoinGecko')}
+            >
+              💎 CoinGecko ({watchlist.categories['CoinGecko']?.length || 0})
+            </button>
+            <button
+              className={`filter-btn ${activeCategories['Dex/OnChain'] ? 'active' : 'inactive'}`}
+              onClick={() => toggleCategory('Dex/OnChain')}
+            >
+              🔍 Dex/OnChain ({watchlist.categories['Dex/OnChain']?.length || 0})
+            </button>
+            <button
+              className={`filter-btn ${activeCategories.CoinBase ? 'active' : 'inactive'}`}
+              onClick={() => toggleCategory('CoinBase')}
+            >
+              🆕 CoinBase ({watchlist.categories['CoinBase']?.length || 0})
+            </button>
+          </div>
         </div>
       </div>
 
+      {/* Alerts Sections */}
       <div className="alerts-sections">
           {/* Explosive Section */}
           <div className="alert-section explosive-section">
@@ -157,9 +278,13 @@ const LiveAlerts = () => {
             <div className="section-alerts">
               {explosiveAlerts.map(alert => (
                 <div key={alert.id} className="alert-item explosive">
-                  <div className="alert-symbol">{alert.symbol}</div>
+                  <div className="alert-symbol">
+                    <div className="coin-name">{getCoinName(alert.symbol)}</div>
+                    <div className="coin-symbol">{alert.symbol.replace('USDT', '')}</div>
+                  </div>
                   <div className="alert-details">
                     <span className="vol">{alert.vol5m}%</span>
+                    {alert.durationText && <span className="duration">⏱️ {alert.durationText}</span>}
                     <span className="time">{formatTime(alert.timestamp)}</span>
                   </div>
                 </div>
@@ -180,9 +305,13 @@ const LiveAlerts = () => {
             <div className="section-alerts">
               {hotAlerts.map(alert => (
                 <div key={alert.id} className="alert-item hot">
-                  <div className="alert-symbol">{alert.symbol}</div>
+                  <div className="alert-symbol">
+                    <div className="coin-name">{getCoinName(alert.symbol)}</div>
+                    <div className="coin-symbol">{alert.symbol.replace('USDT', '')}</div>
+                  </div>
                   <div className="alert-details">
                     <span className="vol">{alert.vol5m}%</span>
+                    {alert.durationText && <span className="duration">⏱️ {alert.durationText}</span>}
                     <span className="time">{formatTime(alert.timestamp)}</span>
                   </div>
                 </div>
@@ -203,9 +332,13 @@ const LiveAlerts = () => {
             <div className="section-alerts">
               {lowAlerts.map(alert => (
                 <div key={alert.id} className="alert-item low">
-                  <div className="alert-symbol">{alert.symbol}</div>
+                  <div className="alert-symbol">
+                    <div className="coin-name">{getCoinName(alert.symbol)}</div>
+                    <div className="coin-symbol">{alert.symbol.replace('USDT', '')}</div>
+                  </div>
                   <div className="alert-details">
                     <span className="vol">{alert.vol5m}%</span>
+                    {alert.durationText && <span className="duration">⏱️ {alert.durationText}</span>}
                     <span className="time">{formatTime(alert.timestamp)}</span>
                   </div>
                 </div>
@@ -226,9 +359,13 @@ const LiveAlerts = () => {
             <div className="section-alerts">
               {stagnantAlerts.map(alert => (
                 <div key={alert.id} className="alert-item stagnant">
-                  <div className="alert-symbol">{alert.symbol}</div>
+                  <div className="alert-symbol">
+                    <div className="coin-name">{getCoinName(alert.symbol)}</div>
+                    <div className="coin-symbol">{alert.symbol.replace('USDT', '')}</div>
+                  </div>
                   <div className="alert-details">
                     <span className="vol">{alert.vol5m}%</span>
+                    {alert.durationText && <span className="duration">⏱️ {alert.durationText}</span>}
                     <span className="time">{formatTime(alert.timestamp)}</span>
                   </div>
                 </div>
@@ -243,7 +380,16 @@ const LiveAlerts = () => {
       {alerts.length === 0 && (
         <div className="no-alerts">
           <h2>No alerts yet...</h2>
-          <p>Waiting for volatile price movements. This can take 5-10 minutes after startup.</p>
+          <p>Waiting for volatile price movements from your watchlist coins.</p>
+          <p>
+            {getMonitoredSymbols().size === 0
+              ? 'Add coins to your watchlist to start monitoring.'
+              : `Monitoring ${getMonitoredSymbols().size} coins from selected categories.`
+            }
+          </p>
+          <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '10px' }}>
+            This can take 5-10 minutes after startup for volatility to be detected.
+          </p>
           <div className="waiting-animation">
             <div className="pulse"></div>
             <span>Monitoring {ws && ws.readyState === WebSocket.OPEN ? '✅' : '⚠️'}</span>

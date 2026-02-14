@@ -1,0 +1,242 @@
+.avatar-creator {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #0a0e27, #1a1f3a);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.avatar-preview-section {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.avatar-display {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.avatar-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+}
+
+.speech-bubble {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  color: #0a0e27;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+  z-index: 10;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff00ff;
+}
+
+.pose-selector {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.pose-selector h3 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.pose-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pose-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pose-btn:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  transform: translateX(5px);
+}
+
+.pose-btn.active {
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  border-color: #ffff00;
+  color: #0a0e27;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.avatar-customization {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.customization-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.customization-section h3 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.option-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  transform: scale(1.05);
+}
+
+.option-btn.selected {
+  background: linear-gradient(135deg, #00ffff, #0088ff);
+  border-color: #ffff00;
+  color: #0a0e27;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.color-btn {
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.color-btn:hover {
+  border-color: #00ffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.color-btn.selected {
+  border: 3px solid #ffff00;
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.save-avatar-btn {
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  color: #0a0e27;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 5px 30px rgba(0, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.save-avatar-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(255, 0, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .avatar-creator {
+    flex-direction: column;
+  }
+
+  .avatar-preview-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .avatar-customization {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .avatar-creator {
+    padding: 1rem;
+  }
+
+  .option-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .pose-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,414 @@
+.landing {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Auth Buttons (Top Right) */
+.auth-buttons {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    gap: 1rem;
+}
+
+.sign-in-btn {
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+.sign-up-btn {
+    padding: 0.8rem 2rem;
+    background: linear-gradient(45deg, #00ffff, #0088ff);
+    color: #0a0e27;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.sign-up-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 1);
+}
+
+/* Animated Background */
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Main Content */
+.content {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.city-layer {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        #0a0e27 0%, 
+        #1a1f3a 40%, 
+        #2a2f4a 70%, 
+        #0f1428 100%);
+}
+
+/* Buildings */
+.building {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #1a1f3a, #2d3250);
+    border-left: 2px solid rgba(0, 255, 255, 0.3);
+    border-right: 2px solid rgba(255, 0, 255, 0.3);
+    animation: slideBuildings 60s linear infinite;
+}
+
+.building::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 20px,
+        rgba(0, 255, 255, 0.1) 20px,
+        rgba(0, 255, 255, 0.1) 22px
+    );
+}
+
+.building::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 15px,
+        rgba(255, 215, 0, 0.6) 15px,
+        rgba(255, 215, 0, 0.6) 17px
+    ),
+    repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 15px,
+        rgba(0, 200, 255, 0.4) 15px,
+        rgba(0, 200, 255, 0.4) 17px
+    );
+    animation: flicker 3s infinite;
+}
+
+.flying-car {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    animation: flyAcross 15s linear infinite;
+}
+
+.flying-car::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    background: rgba(0, 200, 255, 0.5);
+    border-radius: 8px;
+    top: -8px;
+    left: 15px;
+}
+
+.flying-car::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent);
+    right: 100%;
+    top: 50%;
+    animation: trail 0.5s infinite;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    opacity: 0.3;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+/* Content */
+.content {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 14, 39, 0.3) 0%,
+        rgba(10, 14, 39, 0.7) 100%
+    );
+}
+
+.hero {
+    text-align: center;
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #00ffff;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    animation: fadeIn 2s ease-out;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #b0b8cc;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.cta-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ffff, #0088ff);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 1);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+.stats-preview {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-card {
+    background: rgba(26, 31, 58, 0.6);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    min-width: 150px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.stat-label {
+    color: #8892b0;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    color: #00ffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes slideBuildings {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes flyAcross {
+    0% { left: -100px; }
+    100% { left: 110%; }
+}
+
+@keyframes trail {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+@keyframes gridMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50px); }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+    50% { text-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(255, 0, 255, 0.8); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    .auth-buttons {
+        top: 1rem;
+        right: 1rem;
+        gap: 0.5rem;
+    }
+
+    .sign-in-btn,
+    .sign-up-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .stats-preview {
+        flex-direction: column;
+    }
+}

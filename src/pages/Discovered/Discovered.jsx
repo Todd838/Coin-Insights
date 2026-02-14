@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Discovered.css';
+import { auth } from '../../firebase';
 
 const Discovered = () => {
   const [activeTab, setActiveTab] = useState('all'); // all, onchain, dex
@@ -16,9 +17,22 @@ const Discovered = () => {
 
   const fetchWatchlist = async () => {
     try {
-      const res = await fetch('http://localhost:3003/api/watchlist');
+      const userId = auth.currentUser?.uid;
+      if (!userId) return;
+      
+      const res = await fetch(`http://localhost:3003/api/watchlist?userId=${userId}`);
       const data = await res.json();
-      setWatchlist(new Set(data.symbols || []));
+      // Flatten all categories into one set for checking
+      const allSymbols = new Set();
+      if (data.categories) {
+        Object.values(data.categories).forEach(catSymbols => {
+          catSymbols.forEach(s => allSymbols.add(s));
+        });
+      } else if (data.symbols) {
+        // Old format compatibility
+        data.symbols.forEach(s => allSymbols.add(s));
+      }
+      setWatchlist(allSymbols);
     } catch (e) {
       console.error('Failed to fetch watchlist:', e);
     }
@@ -42,24 +56,26 @@ const Discovered = () => {
   };
 
   const promoteToWatchlist = async (item) => {
-    // For now, we can only promote if we have a Binance symbol
-    // In reality, you'd check if this token is on Binance first
+    const userId = auth.currentUser?.uid;
+    if (!userId) {
+      alert('Please sign in to manage your watchlist');
+      return;
+    }
+    
     const symbol = item.symbol?.toUpperCase() + 'USDT';
     
     try {
       const res = await fetch('http://localhost:3003/api/watchlist/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ symbol }),
+        body: JSON.stringify({ symbol, category: 'Dex/OnChain', userId }),
       });
       const data = await res.json();
       if (data.success) {
         setWatchlist(prev => new Set([...prev, symbol]));
-        alert(`✅ ${symbol} added to watchlist!`);
       }
     } catch (e) {
       console.error('Failed to add to watchlist:', e);
-      alert('❌ Failed to add to watchlist. Check console.');
     }
   };
 
@@ -79,11 +95,45 @@ const Discovered = () => {
           updated.delete(symbol);
           return updated;
         });
-        alert(`🗑️ ${symbol} removed from watchlist`);
       }
     } catch (e) {
       console.error('Failed to remove from watchlist:', e);
-      alert('❌ Failed to remove from watchlist');
+    }
+  };
+
+  const addAllToWatchlist = async () => {
+    const userId = auth.currentUser?.uid;
+    if (!userId) {
+      alert('Please sign in to manage your watchlist');
+      return;
+    }
+    
+    const confirmAdd = window.confirm(`Add all ${filteredItems.length} tokens to Dex/OnChain watchlist?`);
+    if (!confirmAdd) return;
+    
+    try {
+      const symbols = filteredItems.map(item => `${item.symbol?.toUpperCase()}USDT`).filter(s => s !== 'UNDEFINEDUSDT');
+      console.log('Adding', symbols.length, 'discovered tokens to watchlist');
+      
+      const response = await fetch('http://localhost:3003/api/watchlist/bulk-add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ symbols, category: 'Dex/OnChain', userId })
+      });
+      
+      const data = await response.json();
+      console.log('Bulk add response:', data);
+      
+      if (response.ok && data.success) {
+        alert(`✅ Successfully added ${data.added} new tokens to watchlist!\n(${symbols.length - data.added} were already in watchlist)`);
+        fetchWatchlist();
+      } else {
+        console.error('Bulk add failed:', data);
+        alert(`❌ Failed: ${data.error || 'Unknown error'}`);
+      }
+    } catch (error) {
+      console.error('Error bulk adding to watchlist:', error);
+      alert('❌ Failed to add tokens to watchlist. Make sure the backend server is running on port 3003.');
     }
   };
 
@@ -106,7 +156,7 @@ const Discovered = () => {
 
   return (
     <div className="discovered-page">
-      <h1>🔍 Discovered Tokens</h1>
+      <h1>🔍 Onchain/Dex Tokens</h1>
       <p>New tokens from onchain feeds (CoinGecko) and DEX pairs (DexScreener)</p>
 
       <div className="tabs">
@@ -146,6 +196,7 @@ const Discovered = () => {
           ))}
         </select>
         <button onClick={fetchDiscovered}>🔄 Refresh</button>
+        <button onClick={addAllToWatchlist} className="add-all-btn">⭐ Add All to Watchlist</button>
       </div>
 
       {loading ? (
@@ -193,19 +244,13 @@ const Discovered = () => {
                     View
                   </a>
                 )}
-                {watchlist.has(item.symbol?.toUpperCase() + 'USDT') ? (
-                  <button 
-                    className="in-watchlist"
-                    onClick={() => removeFromWatchlist(item)}
-                    title="Remove from watchlist"
-                  >
-                    ✓ In Watchlist
-                  </button>
-                ) : (
-                  <button onClick={() => promoteToWatchlist(item)}>
-                    + Add to Watchlist
-                  </button>
-                )}
+                <button
+                  className={`watchlist-btn ${watchlist.has(item.symbol?.toUpperCase() + 'USDT') ? 'in-watchlist' : ''}`}
+                  onClick={() => watchlist.has(item.symbol?.toUpperCase() + 'USDT') ? removeFromWatchlist(item) : promoteToWatchlist(item)}
+                  title={watchlist.has(item.symbol?.toUpperCase() + 'USDT') ? 'Remove from watchlist' : 'Add to watchlist'}
+                >
+                  {watchlist.has(item.symbol?.toUpperCase() + 'USDT') ? '✓' : '+'}
+                </button>
               </div>
             </div>
           ))}

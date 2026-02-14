@@ -2,10 +2,17 @@
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a0e27, #1a1f3a);
 }
 
 .binance-listings-page h1 {
   margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
 }
 
 .listings-header {
@@ -13,20 +20,34 @@
   justify-content: space-between;
   align-items: center;
   margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .listings-header button {
   padding: 0.75rem 1.5rem;
-  background: #6366f1;
-  color: white;
+  background: linear-gradient(45deg, #00ffff, #0088ff);
+  color: #000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transition: all 0.3s;
 }
 
 .listings-header button:hover {
-  background: #5558e3;
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 1);
+}
+
+.listings-header .add-all-btn {
+  background: linear-gradient(45deg, #ff00ff, #ff0088);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+.listings-header .add-all-btn:hover {
+  box-shadow: 0 0 40px rgba(255, 0, 255, 1);
 }
 
 .listings-table {
@@ -36,18 +57,20 @@
 .listings-table table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(26, 31, 58, 0.6);
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .listings-table th {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 255, 255, 0.1);
   padding: 1rem;
   text-align: left;
   font-weight: 600;
-  color: #fff;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: #00ffff;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.3);
 }
 
 .listings-table td {
@@ -79,32 +102,39 @@
   color: white;
 }
 
-.add-btn {
-  padding: 0.5rem 1rem;
-  background: #10b981;
-  color: white;
-  border: none;
-  border-radius: 6px;
+.watchlist-btn {
+  background: rgba(45, 50, 80, 0.5);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.add-btn:hover {
-  background: #059669;
+.watchlist-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: #00ffff;
+  color: #00ffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
 }
 
-.remove-btn {
-  padding: 0.5rem 1rem;
-  background: #6366f1;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 600;
+.watchlist-btn.in-watchlist {
+  background: rgba(0, 255, 100, 0.3);
+  border-color: #00ff88;
+  color: #00ff88;
 }
 
-.remove-btn:hover {
-  background: #ef4444;
+.watchlist-btn.in-watchlist:hover {
+  background: rgba(255, 50, 50, 0.3);
+  border-color: #ff4646;
+  color: #ff4646;
 }

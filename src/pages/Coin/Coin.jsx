@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { CoinContext } from '../../context/CoinContext';
 import LineChart from '../../components/LineChart/LineChart';
 
+
 const Coin = () => {
 
     const {coinId} = useParams();
@@ -17,7 +18,7 @@ const Coin = () => {
             headers: {'x-cg-demo-api-key': 'CG-dGjsqM8SUfwusmz3fyf74kTc'}
         };
 
-        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}&ids=${coinId}&price_change_percentage=1h`, options)
+        fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&community_data=false&developer_data=false`, options)
             .then(res => res.json())
             .then(res => setCoinData(res))
             .catch(err => console.error(err));

@@ -14,39 +14,104 @@ const PYTHON_PORT = 3002;       // python service listens here
 const COINBASE_URL = "wss://advanced-trade-ws.coinbase.com";
 const DATA_DIR = path.join(__dirname, "..", "data"); // ../data from this script's location
 
-// Top 250 crypto symbols (Coinbase format: BTC-USD, ETH-USD, etc.)
+// ALL 368 Coinbase Advanced Trade USD pairs (maximum available)
 const WATCH = new Set([
-  "BTC-USD", "ETH-USD", "BNB-USD", "SOL-USD", "XRP-USD", "ADA-USD", "DOGE-USD", "MATIC-USD",
-  "DOT-USD", "LTC-USD", "LINK-USD", "TRX-USD", "AVAX-USD", "UNI-USD", "ATOM-USD", "XLM-USD",
-  "ETC-USD", "FIL-USD", "APT-USD", "NEAR-USD", "ARB-USD", "OP-USD", "STX-USD", "INJ-USD",
-  "HBAR-USD", "VET-USD", "ICP-USD", "MKR-USD", "RNDR-USD", "LDO-USD", "ALGO-USD", "QNT-USD",
-  "MANA-USD", "GRT-USD", "SAND-USD", "FTM-USD", "AAVE-USD", "EGLD-USD", "XTZ-USD", "AXS-USD",
-  "APE-USD", "CFX-USD", "EOS-USD", "CHZ-USD", "GALA-USD", "FLR-USD", "FLOW-USD",
-  "MINA-USD", "THETA-USD", "XMR-USD", "RUNE-USD", "NEO-USD", "KLAY-USD", "IMX-USD",
-  "HNT-USD", "DYDX-USD", "AR-USD", "SNX-USD", "ZEC-USD", "ROSE-USD", "WLD-USD", "PERP-USD",
-  "DASH-USD", "COMP-USD", "KNC-USD", "ENS-USD", "ZIL-USD", "CRV-USD", "OMG-USD", "GMX-USD",
-  "IOST-USD", "ZRX-USD", "BAT-USD", "LRC-USD", "ONE-USD", "YGG-USD", "CELO-USD", "SPELL-USD",
-  "COTI-USD", "JASMY-USD", "MASK-USD", "BSV-USD", "RVN-USD", "KAVA-USD", "ENJ-USD", "DGB-USD",
-  "WAVES-USD", "SKL-USD", "ANKR-USD", "IOTX-USD", "ONT-USD", "SUSHI-USD", "SC-USD", "ZEN-USD",
-  "LSK-USD", "NMR-USD", "CHR-USD", "LTO-USD", "BAND-USD", "ICX-USD", "REN-USD", "OGN-USD",
-  "SFP-USD", "OCEAN-USD", "CTK-USD", "BAL-USD", "SRM-USD", "REEF-USD", "RLC-USD", "ALICE-USD",
-  "BNX-USD", "C98-USD", "ALPHA-USD", "STMX-USD", "FET-USD", "PUNDIX-USD", "RSR-USD", "CELR-USD",
-  "CKB-USD", "1INCH-USD", "BAKE-USD", "GTC-USD", "ACH-USD", "ANT-USD", "TOMO-USD",
-  "BEL-USD", "AUDIO-USD", "VIDT-USD", "BLZ-USD", "DENT-USD", "CTSI-USD", "ATA-USD", "TRU-USD",
-  "CVX-USD", "HOOK-USD", "AMB-USD", "GLM-USD", "AGIX-USD", "PHB-USD",
-  "RAD-USD", "EDU-USD", "ID-USD", "BICO-USD", "COMBO-USD", "MAV-USD", "PENDLE-USD", "ARKM-USD",
-  "SUI-USD", "IDEX-USD", "SEI-USD", "CYBER-USD", "NTRN-USD", "TIA-USD", "BEAMX-USD",
-  "PIXEL-USD", "STRK-USD", "PORTAL-USD", "AXL-USD", "WIF-USD", "METIS-USD", "AEVO-USD",
-  "ENA-USD", "W-USD", "TAO-USD", "OMNI-USD", "REZ-USD", "BB-USD", "NOT-USD", "IO-USD",
-  "ZK-USD", "ZRO-USD", "G-USD", "LISTA-USD", "BANANA-USD", "RENDER-USD", "TON-USD", "MEME-USD",
-  "POL-USD", "SCR-USD", "SAFE-USD", "TURBO-USD", "MOM-USD", "CATI-USD", "HMSTR-USD", "EIGEN-USD",
-  "SCRT-USD", "LUMA-USD", "NEIRO-USD", "BTCST-USD", "QUICK-USD", "GRASS-USD"
+  "00-USD", "1INCH-USD", "2Z-USD", "A8-USD", "AAVE-USD", "ABT-USD", "ACH-USD", "ACS-USD",
+  "ACX-USD", "ADA-USD", "AERGO-USD", "AERO-USD", "AGLD-USD", "AIOZ-USD", "AKT-USD", "ALCX-USD",
+  "ALEO-USD", "ALEPH-USD", "ALGO-USD", "ALICE-USD", "ALLO-USD", "ALT-USD", "AMP-USD", "ANKR-USD",
+  "APE-USD", "API3-USD", "APR-USD", "APT-USD", "ARB-USD", "ARKM-USD", "ARPA-USD", "ASM-USD",
+  "AST-USD", "ASTER-USD", "ATH-USD", "ATOM-USD", "AUCTION-USD", "AUDIO-USD", "AURORA-USD", "AVAX-USD",
+  "AVNT-USD", "AVT-USD", "AWE-USD", "AXL-USD", "AXS-USD", "B3-USD", "BADGER-USD", "BAL-USD",
+  "BAND-USD", "BARD-USD", "BAT-USD", "BCH-USD", "BEAM-USD", "BERA-USD", "BICO-USD", "BIGTIME-USD",
+  "BIO-USD", "BIRB-USD", "BLAST-USD", "BLUR-USD", "BLZ-USD", "BNB-USD", "BNKR-USD", "BNT-USD",
+  "BOBA-USD", "BOBBOB-USD", "BONK-USD", "BREV-USD", "BTC-USD", "BTRST-USD", "C98-USD", "CAKE-USD",
+  "CBETH-USD", "CELR-USD", "CFG-USD", "CGLD-USD", "CHZ-USD", "CLANKER-USD", "COMP-USD", "COOKIE-USD",
+  "CORECHAIN-USD", "COSMOSDYDX-USD", "COTI-USD", "COW-USD", "CRO-USD", "CRV-USD", "CTSI-USD", "CTX-USD",
+  "CVC-USD", "CVX-USD", "DAI-USD", "DASH-USD", "DBR-USD", "DEGEN-USD", "DEXT-USD", "DIA-USD",
+  "DIMO-USD", "DNT-USD", "DOGE-USD", "DOGINME-USD", "DOLO-USD", "DOOD-USD", "DOT-USD", "DRIFT-USD",
+  "EDGE-USD", "EGLD-USD", "EIGEN-USD", "ELA-USD", "ELSA-USD", "ENA-USD", "ENS-USD", "ERA-USD",
+  "ETC-USD", "ETH-USD", "ETHFI-USD", "EUL-USD", "FAI-USD", "FARM-USD", "FARTCOIN-USD", "FET-USD",
+  "FIDA-USD", "FIGHT-USD", "FIL-USD", "FIS-USD", "FLOCK-USD", "FLOKI-USD", "FLOW-USD", "FLR-USD",
+  "FLUID-USD", "FORT-USD", "FORTH-USD", "FOX-USD", "FUN1-USD", "G-USD", "GFI-USD", "GHST-USD",
+  "GIGA-USD", "GLM-USD", "GMT-USD", "GNO-USD", "GODS-USD", "GRT-USD", "GST-USD", "GTC-USD",
+  "HBAR-USD", "HFT-USD", "HIGH-USD", "HNT-USD", "HOME-USD", "HONEY-USD", "HOPR-USD", "HYPE-USD",
+  "HYPER-USD", "ICP-USD", "IDEX-USD", "ILV-USD", "IMU-USD", "IMX-USD", "INDEX-USD", "INJ-USD",
+  "INV-USD", "INX-USD", "IO-USD", "IOTX-USD", "IP-USD", "IRYS-USD", "JASMY-USD", "JITOSOL-USD",
+  "JTO-USD", "JUPITER-USD", "KAITO-USD", "KARRAT-USD", "KAVA-USD", "KERNEL-USD", "KEYCAT-USD", "KITE-USD",
+  "KMNO-USD", "KNC-USD", "KRL-USD", "KSM-USD", "KTA-USD", "L3-USD", "LA-USD", "LAYER-USD",
+  "LCX-USD", "LDO-USD", "LIGHTER-USD", "LINEA-USD", "LINK-USD", "LPT-USD", "LQTY-USD", "LRC-USD",
+  "LRDS-USD", "LSETH-USD", "LTC-USD", "MAGIC-USD", "MAMO-USD", "MANA-USD", "MANTLE-USD", "MASK-USD",
+  "MATH-USD", "MDT-USD", "ME-USD", "MET-USD", "METIS-USD", "MINA-USD", "MLN-USD", "MNDE-USD",
+  "MOG-USD", "MON-USD", "MOODENG-USD", "MORPHO-USD", "MPLX-USD", "MSOL-USD", "NCT-USD", "NEAR-USD",
+  "NEON-USD", "NEWT-USD", "NKN-USD", "NMR-USD", "NOICE-USD", "NOM-USD", "OCEAN-USD", "OGN-USD",
+  "OMNI-USD", "ONDO-USD", "OP-USD", "ORCA-USD", "OSMO-USD", "OXT-USD", "PAX-USD", "PAXG-USD",
+  "PENDLE-USD", "PENGU-USD", "PEPE-USD", "PERP-USD", "PIRATE-USD", "PLU-USD", "PLUME-USD", "PNG-USD",
+  "PNUT-USD", "POL-USD", "POLS-USD", "POND-USD", "POPCAT-USD", "POWR-USD", "PRCL-USD", "PRIME-USD",
+  "PRO-USD", "PROMPT-USD", "PROVE-USD", "PUMP-USD", "PUNDIX-USD", "PYR-USD", "PYTH-USD", "QI-USD",
+  "QNT-USD", "RAD-USD", "RARE-USD", "RARI-USD", "RAY-USD", "RECALL-USD", "RED-USD", "RENDER-USD",
+  "REQ-USD", "REZ-USD", "RLC-USD", "RLS-USD", "RNBW-USD", "RONIN-USD", "ROSE-USD", "RPL-USD",
+  "RSC-USD", "RSR-USD", "S-USD", "SAFE-USD", "SAND-USD", "SAPIEN-USD", "SD-USD", "SEAM-USD",
+  "SEI-USD", "SENT-USD", "SHDW-USD", "SHIB-USD", "SHPING-USD", "SKL-USD", "SKR-USD", "SKY-USD",
+  "SNX-USD", "SOL-USD", "SPA-USD", "SPELL-USD", "SPK-USD", "SPX-USD", "SQD-USD", "STG-USD",
+  "STORJ-USD", "STRK-USD", "STX-USD", "SUI-USD", "SUKU-USD", "SUP-USD", "SUPER-USD", "SUSHI-USD",
+  "SWELL-USD", "SWFTC-USD", "SXT-USD", "SYND-USD", "SYRUP-USD", "T-USD", "TAO-USD", "THQ-USD",
+  "TIA-USD", "TIME-USD", "TNSR-USD", "TON-USD", "TOSHI-USD", "TOWNS-USD", "TRAC-USD", "TRB-USD",
+  "TREE-USD", "TRIA-USD", "TROLL-USD", "TRU-USD", "TRUMP-USD", "TRUST-USD", "TURBO-USD", "UMA-USD",
+  "UNI-USD", "USD1-USD", "USDS-USD", "USDT-USD", "USELESS-USD", "VARA-USD", "VELO-USD", "VET-USD",
+  "VOXEL-USD", "VTHO-USD", "VVV-USD", "W-USD", "WAXL-USD", "WCT-USD", "WELL-USD", "WET-USD",
+  "WIF-USD", "WLD-USD", "WLFI-USD", "WMTX-USD", "XAN-USD", "XCN-USD", "XLM-USD", "XPL-USD",
+  "XRP-USD", "XTZ-USD", "XYO-USD", "YB-USD", "YFI-USD", "ZAMA-USD", "ZEC-USD", "ZEN-USD",
+  "ZETA-USD", "ZETACHAIN-USD", "ZK-USD", "ZKC-USD", "ZKP-USD", "ZORA-USD", "ZRO-USD", "ZRX-USD"
 ]);
 
 // Map Coinbase symbols back to Binance format for compatibility with Python/UI
 // Example: "BTC-USD" -> "BTCUSDT"
 function coinbaseToLegacy(symbol) {
   return symbol.replace("-USD", "USDT").replace("-", "");
+}
+
+// Initialize watchlist with categories
+// Helper function to get user-specific watchlist file path
+function getUserWatchlistPath(userId) {
+  if (!userId || userId === 'undefined') {
+    return path.join(DATA_DIR, "watchlist.json");
+  }
+  return path.join(DATA_DIR, `watchlist_${userId}.json`);
+}
+
+async function ensureWatchlistStructure(userId = null) {
+  const watchlistPath = getUserWatchlistPath(userId);
+  try {
+    const data = await fs.readFile(watchlistPath, "utf8");
+    const watchlist = JSON.parse(data);
+    
+    // If old format (flat array), migrate to new format
+    if (Array.isArray(watchlist.symbols) && !watchlist.categories) {
+      const migrated = {
+        categories: {
+          "CoinGecko": watchlist.symbols || [],
+          "Dex/OnChain": [],
+          "CoinBase": []
+        },
+        updatedAt: new Date().toISOString()
+      };
+      await fs.writeFile(watchlistPath, JSON.stringify(migrated, null, 2), "utf8");
+      return migrated;
+    }
+    return watchlist;
+  } catch (e) {
+    // Create new structure
+    const initial = {
+      categories: {
+        "CoinGecko": [],
+        "Dex/OnChain": [],
+        "CoinBase": []
+      },
+      updatedAt: new Date().toISOString()
+    };
+    await fs.writeFile(watchlistPath, JSON.stringify(initial, null, 2), "utf8");
+    return initial;
+  }
 }
 
 // Map legacy Binance symbols to Coinbase format
@@ -60,21 +125,16 @@ function legacyToCoinbase(symbol) {
 }
 
 // Load watchlist from file and add to WATCH set
+// Note: WATCH is already pre-populated with all 368 Coinbase pairs
+// This function is kept for backward compatibility but no longer loads user-specific watchlists
 async function loadWatchlist() {
   try {
-    const filePath = path.join(DATA_DIR, "watchlist.json");
-    const raw = await fs.readFile(filePath, "utf8");
-    const watchlist = JSON.parse(raw);
-    
-    for (const symbol of watchlist.symbols || []) {
-      // Convert legacy format to Coinbase format if needed
-      const coinbaseSymbol = legacyToCoinbase(symbol);
-      WATCH.add(coinbaseSymbol);
-    }
-    
-    console.log(`✅ Loaded ${watchlist.symbols?.length || 0} symbols from watchlist`);
+    // WATCH already contains all Coinbase pairs
+    // No need to load user-specific watchlists at startup
+    const totalSymbols = Array.from(WATCH).length;
+    console.log(`✅ WATCH initialized with ${totalSymbols} Coinbase pairs`);
   } catch (e) {
-    console.log("⚠️ No watchlist.json found, using default symbols");
+    console.log("⚠️ Error in loadWatchlist:", e.message);
   }
 }
 
@@ -247,7 +307,7 @@ function connectCoinbase() {
 
 connectCoinbase();
 
-// --- REST API Server for Discovery Data ---
+// --- Helper function for reading JSON files ---
 async function readJsonFile(filename) {
   try {
     const filePath = path.join(DATA_DIR, filename);
@@ -258,12 +318,224 @@ async function readJsonFile(filename) {
   }
 }
 
+// --- CoinGecko Price Polling (for CoinGecko coins) ---
+// Note: Using CoinGecko /coins/markets API which provides symbol+price directly
+let coinGeckoPollingInterval = null;
+let lastCoinGeckoPrices = new Map(); // symbol -> { price, lastUpdate }
+const COINGECKO_API_KEY = 'CG-dGjsqM8SUfwusmz3fyf74kTc';
+
+async function pollCoinGeckoPrices() {
+  try {
+    // Get all user watchlists and extract CoinGecko symbols
+    const files = await fs.readdir(DATA_DIR);
+    const watchlistFiles = files.filter(f => f.startsWith('watchlist_') && f.endsWith('.json'));
+
+    const coinGeckoSymbols = new Set();
+
+    // Read all user watchlists
+    for (const file of watchlistFiles) {
+      try {
+        const data = await readJsonFile(file);
+        if (data.categories && data.categories['CoinGecko']) {
+          data.categories['CoinGecko'].forEach(symbol => {
+            coinGeckoSymbols.add(symbol);
+          });
+        }
+      } catch (e) {
+        console.error(`Error reading ${file}:`, e.message);
+      }
+    }
+
+    if (coinGeckoSymbols.size === 0) {
+      return;
+    }
+
+    console.log(`🔄 Polling CoinGecko for ${coinGeckoSymbols.size} coins...`);
+
+    // Use /coins/markets endpoint to get top 1000 coins with real-time prices
+    // This returns symbol + price directly, no need for mapping
+    const pages = 4; // 4 pages * 250 = 1000 coins
+    let processedCount = 0;
+
+    for (let page = 1; page <= pages; page++) {
+      try {
+        const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=${page}&sparkline=false`;
+        const response = await fetch(url, {
+          headers: {
+            'x-cg-demo-api-key': COINGECKO_API_KEY
+          }
+        });
+
+        if (!response.ok) {
+          console.warn(`⚠️ CoinGecko API error on page ${page}: ${response.status}`);
+          continue;
+        }
+
+        const coins = await response.json();
+
+        // Process each coin
+        for (const coin of coins) {
+          const symbol = `${coin.symbol.toUpperCase()}USDT`;
+
+          // Only process if it's in user's watchlist
+          if (coinGeckoSymbols.has(symbol) && coin.current_price) {
+            const price = coin.current_price;
+            const ts = Date.now();
+
+            // Check if price changed significantly (>0.01%)
+            const lastPrice = lastCoinGeckoPrices.get(symbol);
+            const priceChangePct = lastPrice ? Math.abs((price - lastPrice.price) / lastPrice.price * 100) : 100;
+
+            if (priceChangePct > 0.01 || !lastPrice) {
+              lastCoinGeckoPrices.set(symbol, { price, lastUpdate: ts });
+
+              // Send to Python analytics
+              const ticksForPython = [{ symbol, price, ts }];
+              if (pyWS && pyWS.readyState === WebSocket.OPEN) {
+                pyWS.send(JSON.stringify({ type: "ticks", ticks: ticksForPython }));
+              }
+
+              // Broadcast to UI
+              broadcastToUI({ type: "prices", updates: [{ symbol, price, ts }] });
+              processedCount++;
+            }
+          }
+        }
+
+        console.log(`✅ CoinGecko page ${page}/${pages}: processed ${processedCount} watchlist coins so far`);
+
+        // Rate limiting: 1 second between pages (CoinGecko free tier: 10-30 calls/min)
+        if (page < pages) {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+      } catch (e) {
+        console.error(`Error polling CoinGecko page ${page}:`, e.message);
+      }
+    }
+
+    if (processedCount > 0) {
+      console.log(`📊 Sent ${processedCount} price updates to Python for volatility analysis`);
+    }
+  } catch (e) {
+    console.error('Error in CoinGecko polling:', e.message);
+  }
+}
+
+// Start CoinGecko polling (every 30 seconds for near real-time updates)
+coinGeckoPollingInterval = setInterval(pollCoinGeckoPrices, 30000);
+pollCoinGeckoPrices(); // Initial poll
+
+console.log('✅ CoinGecko price polling initialized for CoinGecko coins');
+
+// --- DexScreener Polling for DEX-only tokens ---
+let dexPollingInterval = null;
+let lastDexPrices = new Map(); // symbol -> { price, lastUpdate }
+
+async function pollDexScreenerPrices() {
+  try {
+    // Get all user watchlists and extract Dex/OnChain symbols
+    const files = await fs.readdir(DATA_DIR);
+    const watchlistFiles = files.filter(f => f.startsWith('watchlist_') && f.endsWith('.json'));
+
+    const dexSymbols = new Set();
+
+    // Read all user watchlists
+    for (const file of watchlistFiles) {
+      try {
+        const data = await readJsonFile(file);
+        if (data.categories && data.categories['Dex/OnChain']) {
+          data.categories['Dex/OnChain'].forEach(symbol => {
+            // Skip if already on Binance (those get WebSocket feeds)
+            if (!symbol.endsWith('USDT')) {
+              dexSymbols.add(symbol);
+            }
+          });
+        }
+      } catch (e) {
+        console.error(`Error reading ${file}:`, e.message);
+      }
+    }
+
+    if (dexSymbols.size === 0) {
+      return;
+    }
+
+    // Poll DexScreener for each symbol
+    // Note: DexScreener API rate limits apply, so we batch this carefully
+    const symbolArray = Array.from(dexSymbols);
+    console.log(`🔄 Polling DexScreener for ${symbolArray.length} DEX-only tokens...`);
+
+    for (const symbol of symbolArray) {
+      try {
+        // DexScreener search API (free tier)
+        const searchUrl = `https://api.dexscreener.com/latest/dex/search?q=${encodeURIComponent(symbol)}`;
+        const response = await fetch(searchUrl);
+
+        if (!response.ok) {
+          console.warn(`⚠️ DexScreener API error for ${symbol}: ${response.status}`);
+          continue;
+        }
+
+        const data = await response.json();
+
+        // Get the first matching pair with highest liquidity
+        if (data.pairs && data.pairs.length > 0) {
+          const bestPair = data.pairs
+            .filter(p => p.liquidity?.usd > 1000) // Min $1k liquidity
+            .sort((a, b) => (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0))[0];
+
+          if (bestPair && bestPair.priceUsd) {
+            const price = parseFloat(bestPair.priceUsd);
+            const ts = Date.now();
+
+            // Check if price changed significantly (>0.01%) to avoid spam
+            const lastPrice = lastDexPrices.get(symbol);
+            const priceChangePct = lastPrice ? Math.abs((price - lastPrice.price) / lastPrice.price * 100) : 100;
+
+            if (priceChangePct > 0.01 || !lastPrice) {
+              lastDexPrices.set(symbol, { price, lastUpdate: ts });
+
+              // Send to Python analytics
+              const ticksForPython = [{ symbol, price, ts }];
+              if (pyWS && pyWS.readyState === WebSocket.OPEN) {
+                pyWS.send(JSON.stringify({ type: "ticks", ticks: ticksForPython }));
+              }
+
+              // Broadcast to UI
+              broadcastToUI({ type: "prices", updates: [{ symbol, price, ts }] });
+
+              console.log(`📊 DEX price: ${symbol} = $${price.toFixed(6)} (via ${bestPair.dexId})`);
+            }
+          }
+        }
+
+        // Rate limiting: 300ms between requests (max ~3 req/sec per DexScreener limits)
+        await new Promise(resolve => setTimeout(resolve, 300));
+      } catch (e) {
+        console.error(`Error polling ${symbol}:`, e.message);
+      }
+    }
+  } catch (e) {
+    console.error('Error in DEX polling:', e.message);
+  }
+}
+
+// Start DEX polling (every 30 seconds for near real-time updates)
+dexPollingInterval = setInterval(pollDexScreenerPrices, 30000);
+pollDexScreenerPrices(); // Initial poll
+
+console.log('✅ DexScreener polling initialized for DEX-only tokens');
+
+// --- REST API Server for Discovery Data ---
 const httpServer = http.createServer(async (req, res) => {
+  // Log all incoming requests
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+
   // CORS headers
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  
+
   if (req.method === "OPTIONS") {
     res.writeHead(200);
     res.end();
@@ -319,10 +591,14 @@ const httpServer = http.createServer(async (req, res) => {
     }
 
     // GET /api/watchlist
-    if (req.url === "/api/watchlist" && req.method === "GET") {
-      const data = await readJsonFile("watchlist.json");
+    if (req.url.startsWith("/api/watchlist") && req.method === "GET") {
+      // Parse query params for userId
+      const url = new URL(req.url, `http://${req.headers.host}`);
+      const userId = url.searchParams.get('userId');
+      
+      const data = await ensureWatchlistStructure(userId);
       res.writeHead(200);
-      res.end(JSON.stringify(data || { symbols: [] }));
+      res.end(JSON.stringify(data));
       return;
     }
 
@@ -332,7 +608,7 @@ const httpServer = http.createServer(async (req, res) => {
       req.on("data", (chunk) => (body += chunk));
       req.on("end", async () => {
         try {
-          const { symbol } = JSON.parse(body);
+          const { symbol, category, userId } = JSON.parse(body);
           if (!symbol) {
             res.writeHead(400);
             res.end(JSON.stringify({ error: "Missing symbol" }));
@@ -342,13 +618,22 @@ const httpServer = http.createServer(async (req, res) => {
           // Normalize: accept both formats, store in legacy format for compatibility
           const legacySymbol = symbol.includes("-") ? coinbaseToLegacy(symbol) : symbol;
           const coinbaseSymbol = legacyToCoinbase(legacySymbol);
+          const targetCategory = category || "CoinGecko";
 
-          const watchlist = await readJsonFile("watchlist.json") || { symbols: [] };
-          if (!watchlist.symbols.includes(legacySymbol)) {
-            watchlist.symbols.push(legacySymbol);
+          const watchlist = await ensureWatchlistStructure(userId);
+          
+          if (!watchlist.categories[targetCategory]) {
+            watchlist.categories[targetCategory] = [];
+          }
+          
+          // Check if symbol already exists in the SAME category (not all categories)
+          const alreadyExists = watchlist.categories[targetCategory].includes(legacySymbol);
+          
+          if (!alreadyExists) {
+            watchlist.categories[targetCategory].push(legacySymbol);
             watchlist.updatedAt = new Date().toISOString();
             
-            const filePath = path.join(DATA_DIR, "watchlist.json");
+            const filePath = getUserWatchlistPath(userId);
             await fs.writeFile(filePath, JSON.stringify(watchlist, null, 2), "utf8");
             
             // Add to WATCH set in Coinbase format for live tracking
@@ -379,13 +664,84 @@ const httpServer = http.createServer(async (req, res) => {
       return;
     }
 
+    // POST /api/watchlist/bulk-add
+    if (req.url === "/api/watchlist/bulk-add" && req.method === "POST") {
+      let body = "";
+      req.on("data", (chunk) => (body += chunk));
+      req.on("end", async () => {
+        try {
+          const { symbols, category, userId } = JSON.parse(body);
+          if (!symbols || !Array.isArray(symbols)) {
+            res.writeHead(400);
+            res.end(JSON.stringify({ error: "Missing or invalid symbols array" }));
+            return;
+          }
+
+          const targetCategory = category || "CoinGecko";
+          const watchlist = await ensureWatchlistStructure(userId);
+          
+          if (!watchlist.categories[targetCategory]) {
+            watchlist.categories[targetCategory] = [];
+          }
+
+          let addedCount = 0;
+          const existingInCategory = new Set(watchlist.categories[targetCategory] || []);
+          
+          // Add new symbols
+          for (const symbol of symbols) {
+            const legacySymbol = symbol.includes("-") ? coinbaseToLegacy(symbol) : symbol;
+            const coinbaseSymbol = legacyToCoinbase(legacySymbol);
+            
+            // Only check if symbol exists in the SAME category, not all categories
+            if (!existingInCategory.has(legacySymbol)) {
+              watchlist.categories[targetCategory].push(legacySymbol);
+              existingInCategory.add(legacySymbol);
+              WATCH.add(coinbaseSymbol);
+              addedCount++;
+            }
+          }
+
+          if (addedCount > 0) {
+            watchlist.updatedAt = new Date().toISOString();
+            
+            const filePath = getUserWatchlistPath(userId);
+            await fs.writeFile(filePath, JSON.stringify(watchlist, null, 2), "utf8");
+            
+            // Resubscribe to Coinbase with updated list (if connected)
+            if (coinbaseWS && coinbaseWS.readyState === WebSocket.OPEN) {
+              const productIds = Array.from(WATCH);
+              coinbaseWS.send(JSON.stringify({
+                type: "subscribe",
+                channel: "ticker",
+                product_ids: productIds,
+              }));
+              console.log(`✅ Bulk added ${addedCount} symbols to ${targetCategory} watchlist`);
+            }
+          }
+
+          res.writeHead(200);
+          res.end(JSON.stringify({ 
+            success: true, 
+            added: addedCount,
+            total: symbols.length,
+            message: `Added ${addedCount} of ${symbols.length} symbols`
+          }));
+        } catch (e) {
+          console.error("Error in bulk-add:", e);
+          res.writeHead(500);
+          res.end(JSON.stringify({ error: e.message }));
+        }
+      });
+      return;
+    }
+
     // POST /api/watchlist/remove
     if (req.url === "/api/watchlist/remove" && req.method === "POST") {
       let body = "";
       req.on("data", (chunk) => (body += chunk));
       req.on("end", async () => {
         try {
-          const { symbol } = JSON.parse(body);
+          const { symbol, userId } = JSON.parse(body);
           if (!symbol) {
             res.writeHead(400);
             res.end(JSON.stringify({ error: "Missing symbol" }));
@@ -394,32 +750,27 @@ const httpServer = http.createServer(async (req, res) => {
 
           // Normalize: accept both formats
           const legacySymbol = symbol.includes("-") ? coinbaseToLegacy(symbol) : symbol;
-          const coinbaseSymbol = legacyToCoinbase(legacySymbol);
 
-          const watchlist = await readJsonFile("watchlist.json") || { symbols: [] };
-          const initialLength = watchlist.symbols.length;
-          watchlist.symbols = watchlist.symbols.filter(s => s !== legacySymbol);
-          
-          if (watchlist.symbols.length < initialLength) {
-            watchlist.updatedAt = new Date().toISOString();
-            
-            const filePath = path.join(DATA_DIR, "watchlist.json");
-            await fs.writeFile(filePath, JSON.stringify(watchlist, null, 2), "utf8");
-            
-            // Remove from WATCH set
-            WATCH.delete(coinbaseSymbol);
-            
-            // Resubscribe to Coinbase with updated list (if connected)
-            if (coinbaseWS && coinbaseWS.readyState === WebSocket.OPEN) {
-              const productIds = Array.from(WATCH);
-              coinbaseWS.send(JSON.stringify({
-                type: "unsubscribe",
-                channel: "ticker",
-                product_ids: [coinbaseSymbol],
-              }));
-              console.log(`✅ Unsubscribed from: ${coinbaseSymbol}`);
+          const watchlist = await ensureWatchlistStructure(userId);
+          let removed = false;
+
+          // Remove from all categories
+          for (const cat in watchlist.categories) {
+            const initialLength = watchlist.categories[cat].length;
+            watchlist.categories[cat] = watchlist.categories[cat].filter(s => s !== legacySymbol);
+            if (watchlist.categories[cat].length < initialLength) {
+              removed = true;
             }
-            
+          }
+
+          if (removed) {
+            watchlist.updatedAt = new Date().toISOString();
+
+            const filePath = getUserWatchlistPath(userId);
+            await fs.writeFile(filePath, JSON.stringify(watchlist, null, 2), "utf8");
+
+            console.log(`✅ Removed ${legacySymbol} from watchlist for user ${userId}`);
+
             res.writeHead(200);
             res.end(JSON.stringify({ success: true, symbol: legacySymbol, removed: true }));
           } else {
@@ -427,6 +778,87 @@ const httpServer = http.createServer(async (req, res) => {
             res.end(JSON.stringify({ success: false, message: "Symbol not in watchlist" }));
           }
         } catch (e) {
+          console.error(`Error in remove: ${e.message}`);
+          res.writeHead(500);
+          res.end(JSON.stringify({ error: e.message }));
+        }
+      });
+      return;
+    }
+
+    // POST /api/watchlist/remove-all
+    if (req.url === "/api/watchlist/remove-all" && req.method === "POST") {
+      let body = "";
+      req.on("data", (chunk) => (body += chunk));
+      req.on("end", async () => {
+        try {
+          const { category, userId } = JSON.parse(body);
+          if (!category) {
+            res.writeHead(400);
+            res.end(JSON.stringify({ error: "Missing category" }));
+            return;
+          }
+
+          const watchlist = await ensureWatchlistStructure(userId);
+
+          if (!watchlist.categories[category]) {
+            res.writeHead(400);
+            res.end(JSON.stringify({ error: "Invalid category" }));
+            return;
+          }
+
+          const removedCount = watchlist.categories[category]?.length || 0;
+
+          // Clear the category
+          watchlist.categories[category] = [];
+          watchlist.updatedAt = new Date().toISOString();
+
+          const filePath = getUserWatchlistPath(userId);
+          await fs.writeFile(filePath, JSON.stringify(watchlist, null, 2), "utf8");
+
+          console.log(`✅ Removed all ${removedCount} coins from ${category} category for user ${userId}`);
+
+          res.writeHead(200);
+          res.end(JSON.stringify({ success: true, category, removedCount }));
+        } catch (e) {
+          console.error(`Error in remove-all: ${e.message}`);
+          res.writeHead(500);
+          res.end(JSON.stringify({ error: e.message }));
+        }
+      });
+      return;
+    }
+
+    // POST /api/watchlist/sync-coinbase
+    if (req.url === "/api/watchlist/sync-coinbase" && req.method === "POST") {
+      let body = "";
+      req.on("data", (chunk) => (body += chunk));
+      req.on("end", async () => {
+        try {
+          const { userId } = JSON.parse(body);
+
+          // Convert Coinbase pairs to legacy format (BTC-USD -> BTCUSDT)
+          const allCoinbaseSymbols = Array.from(WATCH).map(pair => coinbaseToLegacy(pair));
+
+          const watchlist = await ensureWatchlistStructure(userId);
+
+          // Replace CoinBase category with all 368 official Coinbase coins
+          watchlist.categories['CoinBase'] = allCoinbaseSymbols;
+          watchlist.updatedAt = new Date().toISOString();
+
+          const filePath = getUserWatchlistPath(userId);
+          await fs.writeFile(filePath, JSON.stringify(watchlist, null, 2), "utf8");
+
+          console.log(`✅ Synced ${allCoinbaseSymbols.length} Coinbase coins for user ${userId}`);
+
+          res.writeHead(200);
+          res.end(JSON.stringify({
+            success: true,
+            count: allCoinbaseSymbols.length,
+            message: `Synced all ${allCoinbaseSymbols.length} Coinbase coins`
+          }));
+        } catch (e) {
+          console.error(`Error in sync-coinbase: ${e.message}`);
           res.writeHead(500);
           res.end(JSON.stringify({ error: e.message }));
         }
